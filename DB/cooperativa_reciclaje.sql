@@ -31,3 +31,8 @@ INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
 ('Envases plásticos', 
  'https://ichef.bbci.co.uk/news/640/cpsprodpb/C6DF/production/_97011905_gettyimages-103583960-1.jpg', 
  'Se aceptar plásticos derivados de botellas, (no se aceptarán envases de yogurt o queso blanco). Se deberá entregar limpias, secas y aplastadas.');
+
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Latas de conserva', 
+ 'https://i.blogs.es/7e2930/reciclar8/1366_2000.jpg', 
+ 'Se aceptarán todo tipo de latas. Deben estar secas y aplastadas, y no deben contener sus respectivas etiquetas.');
