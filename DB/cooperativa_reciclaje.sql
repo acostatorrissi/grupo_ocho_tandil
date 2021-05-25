@@ -22,6 +22,11 @@ INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
  'https://www.elagoradiario.com/wp-content/uploads/2019/07/Monta%C3%B1a-de-papel-1140x600.jpg', 
  'Se aceptar cualquier tipo de papel (revistas, diarios, envoltorios, etc.). Se deberá entregar seco y sujetado con hilo.');
 
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Cartón', 
+ 'https://ecologiahoy.net/wp-content/uploads/2014/10/13592772-los-residuos-de-carton-para-reciclaje-paquete-aislado-en-blanco-e1413857559361.jpg', 
+ 'Se aceptar cualquier tipo de cartón (cajas, bolsas que sean de este material, etc.). Se deberá entregar seco, limpio y en el caso de las cajas, tendrán que estar desarmadas. Todo sujetado con hilo.');
+
 
 
 
