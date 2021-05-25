@@ -13,11 +13,15 @@ class View{
     function Mostrar() {
 
         $this->smarty->assign('Titulo',"Home");
-        $this->smarty->display('template/form-ciudadano.tpl'); 
+        $this->smarty->display('template/header.tpl'); 
     }
 
     function Header() {
         $this->smarty->display('template/header.tpl'); 
+    }
+
+    function MostrarFormCiudadano() {
+        $this->smarty->display('template/form-ciudadano.tpl');  
     }
 }
 ?>

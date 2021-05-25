@@ -40,7 +40,13 @@
                 </div> 
                 <div class="row row-form-post">
                     <input type="text" class="texto-form">
-                </div>                          
+                </div>
+                <div class="row row-form-post-text">
+                    <h5>Apellido</h5>   
+                </div> 
+                <div class="row row-form-post">
+                    <input type="text" class="texto-form">
+                </div>          
             </div> 
             <div class="row box-elem-boton"> 
                 <input type="button" value="CARGAR PEDIDO" class="btn-elem-publicar-aviso">
