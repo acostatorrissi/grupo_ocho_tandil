@@ -31,3 +31,8 @@ INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
 ('Envases plásticos', 
  'https://ichef.bbci.co.uk/news/640/cpsprodpb/C6DF/production/_97011905_gettyimages-103583960-1.jpg', 
  'Se aceptar plásticos derivados de botellas, (no se aceptarán envases de yogurt o queso blanco). Se deberá entregar limpias, secas y aplastadas.');
+
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Botellas de vidrio', 
+ 'https://lh3.googleusercontent.com/proxy/2C0SDeZZ5Im3FfVAHlUKizl6ygmys97kHl8SJDYGDKhREheaOSSjoFvDhwKSlQMYXmURyae52nzaarlMlSeCx9UcVwHLGi4', 
+ 'Todo tipo de vidrio derivado de botellas de líquidos. Deberán entregarse limpias, secas y sin sus respectivas etiquetas.');
