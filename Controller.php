@@ -14,7 +14,9 @@ class Controller{
         $this->model = new Model();
     }
 
-    
+    function Home() {
+        $this->view->Mostrar();
+    }
 
 }
 
