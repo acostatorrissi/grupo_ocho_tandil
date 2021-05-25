@@ -23,5 +23,9 @@ class View{
     function MostrarFormCiudadano() {
         $this->smarty->display('template/form-ciudadano.tpl');  
     }
+
+    function MostrarMateriales() {
+        $this->smarty->display('template/materiales.tpl');  
+    }
 }
 ?>

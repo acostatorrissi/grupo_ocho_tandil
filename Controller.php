@@ -21,6 +21,10 @@ class Controller{
     function FormCiudadano() {
         $this->view->MostrarFormCiudadano();
     }
+
+    function Materiales() {
+        $this->view->MostrarMateriales();
+    }
 }
 
 
