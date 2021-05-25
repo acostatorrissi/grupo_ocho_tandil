@@ -15,6 +15,8 @@
     $r->addRoute("home", "GET", "Controller", "Home");
 
     $r->addRoute("materiales", "GET", "Controller", "Materiales");
+
+    $r->addRoute("form-ciudadano", "GET", "Controller", "FormCiudadano");
     
  
     

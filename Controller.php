@@ -18,6 +18,9 @@ class Controller{
         $this->view->Mostrar();
     }
 
+    function FormCiudadano() {
+        $this->view->MostrarFormCiudadano();
+    }
 }
 
 
