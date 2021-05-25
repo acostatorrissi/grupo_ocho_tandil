@@ -514,7 +514,7 @@ a:hover {
     display: grid;
     column-gap: 45px;
     row-gap: 10px;
-    grid-template-rows: 50px 470px 60px;
+    grid-template-rows: 50px 470px 120px;
     grid-template-columns: 1px 1fr 1px;
     border: 2px solid rgba(227, 237, 230, 0.55);
     box-sizing: border-box;
