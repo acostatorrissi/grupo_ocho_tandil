@@ -46,3 +46,8 @@ INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
 ('Envases de aluminio', 
  'https://www.ambientum.com/wp-content/uploads/2019/11/envases-latas-696x460.jpg', 
  'Se aceptarán todo tipo de latas de aluminio. Deben estar secas y aplastadas.');
+
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Botellas de vidrio', 
+ 'https://lh3.googleusercontent.com/proxy/2C0SDeZZ5Im3FfVAHlUKizl6ygmys97kHl8SJDYGDKhREheaOSSjoFvDhwKSlQMYXmURyae52nzaarlMlSeCx9UcVwHLGi4', 
+ 'Todo tipo de vidrio derivado de botellas de líquidos. Deberán entregarse limpias, secas y sin sus respectivas etiquetas.');
