@@ -33,6 +33,16 @@ INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
  'Se aceptar plásticos derivados de botellas, (no se aceptarán envases de yogurt o queso blanco). Se deberá entregar limpias, secas y aplastadas.');
 
 INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Latas de conserva', 
+ 'https://i.blogs.es/7e2930/reciclar8/1366_2000.jpg', 
+ 'Se aceptarán todo tipo de latas. Deben estar secas y aplastadas, y no deben contener sus respectivas etiquetas.');
+
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Tetrabrik', 
+ 'https://www.expoknews.com/wp-content/uploads/2019/05/Reciclado-de-tetrapack-en-buen-camino-pero-con-grandes-retos-1.jpg', 
+ 'Todo envase de este material será aceptado (bebidas y alimentos). Deberán ser entregados limpios, secos y aplastados.');
+
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
 ('Envases de aluminio', 
  'https://www.ambientum.com/wp-content/uploads/2019/11/envases-latas-696x460.jpg', 
  'Se aceptarán todo tipo de latas de aluminio. Deben estar secas y aplastadas.');
