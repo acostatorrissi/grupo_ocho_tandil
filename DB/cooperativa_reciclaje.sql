@@ -17,5 +17,11 @@ CREATE TABLE material (
     CONSTRAINT material_pk PRIMARY KEY (nombre)
 );
 
--- End of file.
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Papel', 
+ 'https://www.elagoradiario.com/wp-content/uploads/2019/07/Monta%C3%B1a-de-papel-1140x600.jpg', 
+ 'Se aceptar cualquier tipo de papel (revistas, diarios, envoltorios, etc.). Se deberá entregar seco y sujetado con hilo.');
+
+
+
 
