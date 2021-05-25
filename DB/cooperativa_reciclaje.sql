@@ -27,6 +27,7 @@ INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
  'https://ecologiahoy.net/wp-content/uploads/2014/10/13592772-los-residuos-de-carton-para-reciclaje-paquete-aislado-en-blanco-e1413857559361.jpg', 
  'Se aceptar cualquier tipo de cartón (cajas, bolsas que sean de este material, etc.). Se deberá entregar seco, limpio y en el caso de las cajas, tendrán que estar desarmadas. Todo sujetado con hilo.');
 
-
-
-
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Envases plásticos', 
+ 'https://ichef.bbci.co.uk/news/640/cpsprodpb/C6DF/production/_97011905_gettyimages-103583960-1.jpg', 
+ 'Se aceptar plásticos derivados de botellas, (no se aceptarán envases de yogurt o queso blanco). Se deberá entregar limpias, secas y aplastadas.');
