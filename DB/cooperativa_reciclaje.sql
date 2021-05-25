@@ -31,3 +31,8 @@ INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
 ('Envases plásticos', 
  'https://ichef.bbci.co.uk/news/640/cpsprodpb/C6DF/production/_97011905_gettyimages-103583960-1.jpg', 
  'Se aceptar plásticos derivados de botellas, (no se aceptarán envases de yogurt o queso blanco). Se deberá entregar limpias, secas y aplastadas.');
+
+INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
+('Envases de aluminio', 
+ 'https://www.ambientum.com/wp-content/uploads/2019/11/envases-latas-696x460.jpg', 
+ 'Se aceptarán todo tipo de latas de aluminio. Deben estar secas y aplastadas.');
