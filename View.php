@@ -19,5 +19,10 @@ class View{
     function Header() {
         $this->smarty->display('template/header.tpl'); 
     }
+
+    function renderMateriales($materiales){
+        $this->smarty->assign('materiales', $materiales, false);
+        $this->smarty->display('template/materiales.tpl');
+    }
 }
 ?>

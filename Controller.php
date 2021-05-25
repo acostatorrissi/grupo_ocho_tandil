@@ -18,6 +18,10 @@ class Controller{
         $this->view->Mostrar();
     }
 
+    function Materiales() {
+        $materiales = $this->model->getMateriales();
+        $this->view->renderMateriales($materiales);
+    }
 }
 
 
