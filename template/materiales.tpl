@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Materiales Reciclables</title>
-</head>
-<body>
-    <div class="container-fluid container-nav">
-        <div class="row row-nav-logo">
-            <div class="col">
-                 <img src="img/logo-reciclaje.png" alt="logo-reciclaje" id="logo-reciclaje">
-            </div>
-        </div> 
-        <div class="row row-nav-bar">
-            <div class="col col-nav">
-                
-                <a href="">Nosotros</a>
-                <a href="">Materiales</a>
-                <a href="">Registrarse</a>
-                <a href="">Novedades</a>
-                <a href="">Login</a>
-                
-            </div>
-        </div> 
-    </div>
+{include "template/header.tpl" }
 
     <div class="container-fluid container-postulaciones">
         <div class="row row-plantilla">
@@ -34,70 +6,21 @@
                 <h2 class="titulo-pagina">Materiales Reciclables</h2>
             </div>  
             <div class="row row-postulaciones">
-                <div class="row box-elem-uno"> 
-                    <div class="box-img">
-                        <img src="img/lata.png" alt="lata-reciclaje" id="lata-reciclaje">
-                    </div> 
-                    <div class="box-elem">                    
-                        
-                    </div>  
-                </div>
-                <div class="row box-elem-dos"> 
-                    <div class="box-img">
-                        <img src="img/plastico.png" alt="logo-reciclaje" id="plastico-reciclaje">
-                    </div> 
-                    <div class="box-elem">                    
-                        
-                    </div> 
-                </div>
-                <div class="row box-elem-tres"> 
-                    <div class="box-img">
-                        <img src="img/tetra.png" alt="logo-reciclaje" id="plastico-reciclaje">
-                    </div> 
-                    <div class="box-elem">                    
-                        
-                    </div>  
-                </div>
-                <div class="row box-elem-cuatro"> 
-                    <div class="box-img">
-                        <img src="img/vidrio.png" alt="logo-reciclaje" id="plastico-reciclaje">
-                    </div> 
-                    <div class="box-elem">                    
-                        
-                    </div> 
-                </div>
-                <div class="row box-elem-cinco"> 
-                    <div class="box-img">
-                        <img src="img/papel.png" alt="logo-reciclaje" id="plastico-reciclaje">
-                    </div> 
-                    <div class="box-elem">                    
-                        
-                    </div> 
-                </div>
-                <div class="row box-elem-seis"> 
-                    <div class="box-img">
-                        <img src="img/carton.png" alt="logo-reciclaje" id="plastico-reciclaje">
-                    </div> 
-                    <div class="box-elem">                    
-                        
-                    </div> 
-                </div>
-                <div class="row box-elem-siete"> 
-                    <div class="box-img">
-                        <img src="img/logo-reciclaje.png" alt="logo-reciclaje" id="plastico-reciclaje">
-                    </div> 
-                    <div class="box-elem">                    
-                        
-                    </div> 
-                </div>
-                <div class="row box-elem-ocho"> 
-                    <div class="box-img">
-                        <img src="img/logo-reciclaje.png" alt="logo-reciclaje" id="plastico-reciclaje">
-                    </div> 
-                    <div class="box-elem">                    
-                        
-                    </div> 
-                </div>                
+               
+                {$n = 1}
+                {foreach from=$materiales item=material}
+                    <div class="row box-elem{$n}"> 
+                        <div class="box-img">
+                           <img src="{$material->imagen_src}" alt="lata-reciclaje" id="lata-reciclaje">
+                        </div> 
+                        <div class="box-elem">                    
+                            <h5>{$material->nombre}</h5>
+                            <p>{$material->descripcion}</p>
+                        </div>  
+                    </div>
+                    {$n=$n+1}
+                {/foreach}
+               
             </div> 
             <div class="row box-elem-boton"> 
                 

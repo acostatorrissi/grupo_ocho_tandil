@@ -23,7 +23,8 @@ class Controller{
     }
 
     function Materiales() {
-        $this->view->MostrarMateriales();
+        $materiales = $this->model->getMateriales();
+        $this->view->MostrarMateriales($materiales);
     }
 }
 
