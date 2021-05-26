@@ -70,7 +70,7 @@
                 </div> 
                 <div class="row row-form-post ">
                     <select name="select" class="texto-form">
-
+                        <option value="value1" selected>9hs - 12hs</option>
                     </select>
                 </div>                      
             </div> 
