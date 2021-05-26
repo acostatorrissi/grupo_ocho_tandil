@@ -71,6 +71,7 @@
                 <div class="row row-form-post ">
                     <select name="select" class="texto-form">
                         <option value="value1" selected>9hs - 12hs</option>
+                        <option value="value2">13hs - 17hs</option>
                     </select>
                 </div>                      
             </div> 
