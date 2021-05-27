@@ -231,57 +231,51 @@ a:hover {
     align-items: center;
 }
 
-.row-postulaciones > .box-elem-uno{
+.row-postulaciones > .box-elem1{
     grid-column-start: 2;
     grid-column-end: 3;
     border-bottom: 1px solid rgb(231, 231, 231);
 }
 
-.row-postulaciones > .box-elem-dos{
+.row-postulaciones > .box-elem2{
     grid-column-start: 3;
     grid-column-end: 4;
     border-bottom: 1px solid rgb(231, 231, 231);
     border-left: 1px solid rgb(231, 231, 231);
 }
 
-.row-postulaciones > .box-elem-tres{
+.row-postulaciones > .box-elem3{
     grid-column-start: 2;
     grid-column-end: 3;
     border-bottom: 1px solid rgb(231, 231, 231);
 }
 
-.row-postulaciones > .box-elem-cuatro{
+.row-postulaciones > .box-elem4{
     grid-column-start: 3;
     grid-column-end: 4;
     border-bottom: 1px solid rgb(231, 231, 231);
     border-left: 1px solid rgb(231, 231, 231);
 }
 
-.row-postulaciones > .box-elem-cuatro{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    border-bottom: 1px solid rgb(231, 231, 231);
-}
-
-.row-postulaciones > .box-elem-cinco{
+.row-postulaciones > .box-elem5{
     grid-column-start: 2;
     grid-column-end: 3;
     border-bottom: 1px solid rgb(231, 231, 231);
 }
 
-.row-postulaciones > .box-elem-seis{
+.row-postulaciones > .box-elem6{
     grid-column-start: 3;
     grid-column-end: 4;
     border-bottom: 1px solid rgb(231, 231, 231);
 }
 
-.row-postulaciones > .box-elem-siete{
+.row-postulaciones > .box-elem7{
     grid-column-start: 2;
     grid-column-end: 3;
     border-bottom: 1px solid rgb(231, 231, 231);
 }
 
-.row-postulaciones > .box-elem-ocho{
+.row-postulaciones > .box-elem8{
     grid-column-start: 3;
     grid-column-end: 4;
     border-bottom: 1px solid rgb(231, 231, 231);
