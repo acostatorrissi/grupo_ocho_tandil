@@ -1,36 +1,7 @@
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Formulario Ciudadano</title>
-</head>
-<body>
-    <div class="container-fluid container-nav">
-        <div class="row row-nav-logo">
-            <div class="col">
-                 <img src="img/logo-reciclaje.png" alt="logo-reciclaje" id="logo-reciclaje">
-            </div>
-        </div> 
-        <div class="row row-nav-bar">
-            <div class="col col-nav">
-                
-                <a href="">Nosotros</a>
-                <a href="">Materiales</a>
-                <a href="">Registrarse</a>
-                <a href="">Novedades</a>
-                <a href="">Login</a>
-                
-            </div>
-        </div> 
-    </div>
+{include "template/header.tpl" }
     
     <div class="container-fluid container-postulaciones">
-        <form class="row row-plantilla-cargar">
+        <form class="row row-plantilla-cargar" action="insertPedido" method="POST" enctype="multipart/form-data">
             <div class="row box-elem-titulo">
                 <h2 class="titulo-pagina">Formulario de Ciudadano</h2>
             </div>  
@@ -39,59 +10,52 @@
                     <h5>Nombre</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <input type="text" class="texto-form">
+                    <input type="text" class="texto-form" name="nombre">
                 </div>
                 <div class="row row-form-post-text">
                     <h5>Apellido</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <input type="text" class="texto-form">
-                </div> 
-                <div class="row row-form-post-text">
-                    <h5>Email</h5>   
-                </div> 
-                <div class="row row-form-post">
-                    <input type="text" class="texto-form">
-                </div>  
+                    <input type="text" class="texto-form" name="apellido">
+                </div>   
                 <div class="row row-form-post-text">
                     <h5>Domicilio</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <input type="text" class="texto-form">
+                    <input type="text" class="texto-form" name="direccion">
                 </div>
                 <div class="row row-form-post-text">
                     <h5>Teléfono</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <input type="text" class="texto-form">
+                    <input type="text" class="texto-form" name="telefono">
                 </div>
                 <div class="row row-form-post-text">
                     <h5>Capacidad disponible</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <select name="select" class="select-form">
+                    <select name="select" class="select-form" name="volumen">
                         <option value="value1">Entran en un baúl</option>
                         <option value="value2">Entra en una caja de camioneta</option>
                         <option value="value3">Entra en un camión</option>
                         <option value="value4">Entra en una caja</option>                         
                     </select>
-                    <button class="btn btn-secondary">
-                        <i class="fa fa-picture-o"></i>
-                    </button> 
+                    <input type="file" name="imagen_src">
+ 
                 </div>
 
                 <div class="row row-form-post-text">
                     <h5>Franja horaria</h5>
                 </div> 
                 <div class="row row-form-post ">
-                    <select name="select" class="texto-form">
+                    <select name="select" class="texto-form" name="franja_horaria">
                         <option value="value1" selected>9hs - 12hs</option>
                         <option value="value2">13hs - 17hs</option>
                     </select>
                 </div>                      
             </div> 
             <div class="row box-elem-boton"> 
-                <input type="button" value="CARGAR PEDIDO" class="btn-elem-publicar-aviso">
+                <button type="submit" class="btn-elem-publicar-aviso">CARGAR PEDIDO</button>
             </div>
         </form>
     </div>

@@ -29,5 +29,8 @@ class View{
         $this->smarty->assign('cont', count($materiales));
         $this->smarty->display('template/materiales.tpl');  
     }
+    function FormularioLocation(){
+        header("Location: ".BASE_URL."form-ciudadano");
+    }
 }
 ?>

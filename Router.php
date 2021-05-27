@@ -18,7 +18,7 @@
 
     $r->addRoute("form-ciudadano", "GET", "Controller", "FormCiudadano");
     
- 
+    $r->addRoute("insertPedido", "POST", "Controller", "insertPedido");
     
     //run
     $r->route($_GET['action'], $_SERVER['REQUEST_METHOD']); 
