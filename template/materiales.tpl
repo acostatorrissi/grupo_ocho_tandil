@@ -14,8 +14,8 @@
                            <img src="{$material->imagen_src}" alt="lata-reciclaje" id="lata-reciclaje">
                         </div> 
                         <div class="box-elem">                    
-                            <h5>{$material->nombre}</h5>
-                            <p>{$material->descripcion}</p>
+                            <h5 class="titulo">{$material->nombre}</h5>
+                            <p class="descripcion">{$material->descripcion}</p>
                         </div>  
                     </div>
                     {$n=$n+1}
