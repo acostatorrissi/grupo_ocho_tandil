@@ -65,13 +65,13 @@
                 <div class="row row-form-post">
                     <input type="text" class="texto-form">
                 </div>
-                
                 <div class="row row-form-post-text">
                     <h5>Capacidad disponible</h5>   
                 </div> 
                 <div class="row row-form-post">
                     <select name="select" class="select-form">
-                        <option value="value3">Entran en un baúl</option>                        
+                        <option value="value1">Entran en un baúl</option>
+                        <option value="value2">Entra en una caja de camioneta</option>                         
                     </select>
                 </div>
 
