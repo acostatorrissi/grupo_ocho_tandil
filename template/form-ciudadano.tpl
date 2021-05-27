@@ -71,7 +71,8 @@
                 <div class="row row-form-post">
                     <select name="select" class="select-form">
                         <option value="value1">Entran en un baúl</option>
-                        <option value="value2">Entra en una caja de camioneta</option>                         
+                        <option value="value2">Entra en una caja de camioneta</option>
+                        <option value="value3">Entra en un camión</option>                         
                     </select>
                 </div>
 
