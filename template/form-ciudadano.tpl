@@ -30,7 +30,7 @@
     </div>
     
     <div class="container-fluid container-postulaciones">
-        <div class="row row-plantilla-cargar">
+        <form class="row row-plantilla-cargar">
             <div class="row box-elem-titulo">
                 <h2 class="titulo-pagina">Formulario de Ciudadano</h2>
             </div>  
@@ -65,6 +65,15 @@
                 <div class="row row-form-post">
                     <input type="text" class="texto-form">
                 </div>
+                
+                <div class="row row-form-post-text">
+                    <h5>Capacidad disponible</h5>   
+                </div> 
+                <div class="row row-form-post">
+                    <select name="select" class="select-form">                        
+                    </select>
+                </div>
+
                 <div class="row row-form-post-text">
                     <h5>Franja horaria</h5>
                 </div> 
@@ -78,7 +87,7 @@
             <div class="row box-elem-boton"> 
                 <input type="button" value="CARGAR PEDIDO" class="btn-elem-publicar-aviso">
             </div>
-        </div>
+        </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
