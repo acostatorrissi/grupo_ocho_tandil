@@ -16,6 +16,11 @@ class Model{
         $query->execute();
         return  $query->fetchAll(PDO::FETCH_OBJ);
     }
+
+    function insertPedido($nombre,$apellido,$direccion,$telefono,$img,$franja_horaria,$volumen){
+        $sentencia = $this->db->prepare("INSERT INTO pedido(nombre,apellido,direccion,telefono,imagen_src,franja_horaria,volumen) VALUES(?,?,?,?,?,?,?)");
+        $sentencia->execute(array($nombre,$apellido,$direccion,$telefono,$img,$franja_horaria,$volumen));
+      } 
 }
 
 ?>
