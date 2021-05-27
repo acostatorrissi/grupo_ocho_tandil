@@ -70,7 +70,8 @@
                     <h5>Capacidad disponible</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <select name="select" class="select-form">                        
+                    <select name="select" class="select-form">
+                        <option value="value3">Entran en un baúl</option>                        
                     </select>
                 </div>
 
