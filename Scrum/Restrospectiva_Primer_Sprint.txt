@@ -1,0 +1,17 @@
+Realizada el sábado 29/05.
+El equipo expresó sus dificultades durante el sprint y aportó ideas de mejora para los siguientes.
+A continuación, los puntos más destacados de la charla:
+
+Qué funcionó bien:
+-> Continuar con el mismo compromiso y nivel de comunicación.
+-> Se valorizaron los procedimientos realizados con respecto a la organización de ramas y commits.
+-> La incorporación del estado “To merge” previo a “Finalizado”.
+
+Qué se debería mejorar:
+-> Basándonos en esta primera experiencia,  las estimaciones de los story points.
+-> Mayor detalle en la descripción de las tareas.
+-> Actualizar la presentación de la demo a medida que se vayan generando puntos de interés.
+
+Compromisos para próximo sprint:
+-> Incorporar una reunión semanal con formato de daily.
+-> Mantener la calidad tanto en el código como en los procesos.
