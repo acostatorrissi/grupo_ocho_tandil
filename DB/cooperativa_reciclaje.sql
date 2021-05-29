@@ -10,6 +10,10 @@ CREATE TABLE pedido (
     CONSTRAINT Pedido_pk PRIMARY KEY (id_pedido)
 );
 
+ALTER TABLE `pedido`
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
 CREATE TABLE material (
     nombre varchar(100)  NOT NULL,
     imagen_src varchar(200)  NOT NULL,
@@ -51,3 +55,4 @@ INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
 ('Botellas de vidrio', 
  'https://lh3.googleusercontent.com/proxy/2C0SDeZZ5Im3FfVAHlUKizl6ygmys97kHl8SJDYGDKhREheaOSSjoFvDhwKSlQMYXmURyae52nzaarlMlSeCx9UcVwHLGi4', 
  'Todo tipo de vidrio derivado de botellas de líquidos. Deberán entregarse limpias, secas y sin sus respectivas etiquetas.');
+
