@@ -30,10 +30,16 @@ class UserController{
 
                 
                 if(!empty($contrasena)){
+                    $userFromDB = $this->model->getByUser($usuario);
+                    if(!($userFromDB)) {
                         $clave = password_hash($contrasena, PASSWORD_DEFAULT);
                         $this->model->addUsuario($usuario,$clave);
                         $this->verifyLogin();
-
+                    }
+                    else{
+                        $msg = "YA EXISTE EL USUARIO";
+                        $this->view->showRegistro($msg);
+                    }
                 }
                 else{
                     $msg = "INGRESE UNA CONTRASEÑA";
@@ -46,6 +52,7 @@ class UserController{
             $this->view->showRegistro($msg);
         }   
     } 
+
 
     public function verifyLogin() {
         $usuario = $_POST['usuario'];
