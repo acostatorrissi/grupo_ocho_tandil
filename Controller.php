@@ -59,7 +59,29 @@ class Controller{
         move_uploaded_file($rutaTemp,"img/".$img);
         return $img;
     }
-    
+    function newMaterial(){
+        $nombre = $_POST['nombre'];
+        $rutaTemp = $_FILES['imagen']['tmp_name'];//ruta+nombre del archivo temporal
+        $nombreImagen = $_FILES['imagen']['name'];
+        $descripcion = $_POST['descripcion'];
+        
+        if (!empty($nombre)&&!empty($descripcion)) {
+            //se encarga de mover la imagen a la carpeta del proyecto
+            if($_FILES['imagen']['type'] == "image/jpg" || $_FILES['imagen']['type'] == "image/jpeg" ||
+            $_FILES['imagen']['type'] == "image/png"){
+                $img = $this->uploadImage($rutaTemp,$nombreImagen);
+            }
+            else{
+                $img = null;
+            }
+            $this->model->insertMaterial($nombre,$img,$descripcion);
+        }
+        $this->Materiales();
+    }
+
+    function addMaterial(){
+        $this->view->ShowAddMaterial();
+    }
 }
 
 

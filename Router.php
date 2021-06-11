@@ -20,6 +20,11 @@
     
     $r->addRoute("insertPedido", "POST", "Controller", "insertarPedido");
     
+    //ABM Materiales
+        //Alta
+    $r->addRoute("agregarMaterial", "GET", "admController", "addMaterial"); // view
+    $r->addRoute("nuevoMaterial", "POST", "admController", "newMaterial"); // funcion
+    
     //run
     $r->route($_GET['action'], $_SERVER['REQUEST_METHOD']); 
 ?>
