@@ -35,5 +35,15 @@ class View{
     function ShowAddMaterial(){
         $this->smarty->display('');
     }
+
+    function showRegistro($msg = ''){
+        $this->smarty->assign('msg', $msg);
+        $this->smarty->display('template/registro.tpl');
+    }
+
+    function ShowLogin($msg = ''){
+        $this->smarty->assign('msg', $msg);
+        $this->smarty->display('template/login.tpl');
+    }
 }
 ?>

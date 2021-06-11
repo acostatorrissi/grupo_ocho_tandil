@@ -1,5 +1,6 @@
 <?php
     require_once 'Controller.php';
+    require_once 'UserController.php';
     require_once 'RouterClass.php';
     
     // CONSTANTES PARA RUTEO
@@ -24,6 +25,17 @@
         //Alta
     $r->addRoute("agregarMaterial", "GET", "admController", "addMaterial"); // view
     $r->addRoute("nuevoMaterial", "POST", "admController", "newMaterial"); // funcion
+
+    //ABM Registro-Login 
+    $r->addRoute("registro", "GET", "UserController", "showRegistro");//vista de registrar
+    $r->addRoute("registrarse", "POST", "UserController", "registracion");//func de registrar
+
+    $r->addRoute("home", "GET", "Controller", "Home");
+    $r->addRoute("login", "GET", "authController", "Login");
+    $r->addRoute("logout", "GET", "authController", "logout");
+   
+    
+    $r->addRoute("verificar", "POST", "authController", "verifyLogin");
     
     //run
     $r->route($_GET['action'], $_SERVER['REQUEST_METHOD']); 
