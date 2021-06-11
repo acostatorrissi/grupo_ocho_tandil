@@ -1,8 +1,8 @@
 {include "template/header.tpl" }
     
     <div class="container-fluid container-postulaciones">
-          {if $msg!=''}<div class="incorrecto"><h2>{$msg}</h2></div>{/if}
-        <form class="row row-plantilla-cargar" action="registrarse" method="POST" enctype="multipart/form-data">
+          
+        <form class="row row-plantilla-cargar" action="registrarse" method="POST">
             
             <div class="row box-elem-titulo">
                      <h2 class="titulo-pagina">REGISTRARSE</h2>
@@ -15,7 +15,7 @@
                     </div> 
 
                     <div class="row row-form-post">
-                        <input type="text" class="texto-form" name="usuario" placeholder="Usuario">
+                        <input type="text" class="texto-form" name="usuario">
                     </div>
 
                     <div class="row row-form-post-text">
@@ -23,8 +23,11 @@
                     </div>
 
                     <div class="row row-form-post">
-                        <input type="password" class="texto-form" name="contrasena" placeholder="Contraseña">
-                    </div>   
+                        <input type="password" class="texto-form" name="contrasena">
+                    </div> 
+                    <div class="row row-form-post">
+                       {if $msg!=''}<div class="mensaje"><h5>{$msg}</h5></div>{/if} 
+                    </div>  
                
             </div>             
             

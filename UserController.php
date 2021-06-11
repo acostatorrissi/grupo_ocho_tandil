@@ -20,6 +20,10 @@ class UserController{
     public function showRegistro() {
         $this->view->showRegistro();
     }
+    
+    public function showLogin() {
+        $this->view->ShowLogin();
+    }
 
     public function registracion(){
         $usuario = $_POST['usuario'];

@@ -29,13 +29,15 @@
     //ABM Registro-Login 
     $r->addRoute("registro", "GET", "UserController", "showRegistro");//vista de registrar
     $r->addRoute("registrarse", "POST", "UserController", "registracion");//func de registrar
-
-    $r->addRoute("home", "GET", "Controller", "Home");
-    $r->addRoute("login", "GET", "authController", "Login");
-    $r->addRoute("logout", "GET", "authController", "logout");
+    $r->addRoute("verificar", "POST", "UserController", "verifyLogin");
+    $r->addRoute("login", "GET", "UserController", "showLogin");
+    
+    
+   
+    $r->addRoute("logout", "GET", "UserController", "logout");
    
     
-    $r->addRoute("verificar", "POST", "authController", "verifyLogin");
+   
     
     //run
     $r->route($_GET['action'], $_SERVER['REQUEST_METHOD']); 
