@@ -32,5 +32,8 @@ class View{
     function FormularioLocation(){
         header("Location: ".BASE_URL."form-ciudadano");
     }
+    function ShowAddMaterial(){
+        $this->smarty->display('');
+    }
 }
 ?>
