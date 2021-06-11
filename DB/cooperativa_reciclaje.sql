@@ -21,6 +21,21 @@ CREATE TABLE material (
     CONSTRAINT material_pk PRIMARY KEY (nombre)
 );
 
+CREATE TABLE `user` (
+  `id` int(50) NOT NULL,
+  `usuario` varchar(255) NOT NULL,
+  `contrasenia` varchar(500) NOT NULL,
+  `admin` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- AUTO_INCREMENT de la tabla `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+
 INSERT INTO `material` (`nombre`, `imagen_src`, `descripcion`) VALUES
 ('Papel', 
  'https://www.elagoradiario.com/wp-content/uploads/2019/07/Monta%C3%B1a-de-papel-1140x600.jpg', 
