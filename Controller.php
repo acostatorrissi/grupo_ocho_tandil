@@ -27,7 +27,8 @@ class Controller{
         $this->view->MostrarMateriales($materiales);
     }
    
-    function insertPedido(){
+    function insertarPedido(){
+
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $direccion = $_POST['direccion'];
@@ -54,7 +55,7 @@ class Controller{
     }
 
     function uploadImage($rutaTemp,$nombreImagen){
-        $img = uniqid() . "." . pathinfo($nombreImagen, PATHINFO_EXTENSION);;
+        $img = uniqid() . "." . pathinfo($nombreImagen, PATHINFO_EXTENSION);
         move_uploaded_file($rutaTemp,"img/".$img);
         return $img;
     }

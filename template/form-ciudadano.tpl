@@ -34,7 +34,7 @@
                     <h5>Capacidad disponible</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <select name="select" class="select-form" name="volumen">
+                    <select class="select-form" name="volumen">
                         <option value="value1">Entran en un baúl</option>
                         <option value="value2">Entra en una caja de camioneta</option>
                         <option value="value3">Entra en un camión</option>
@@ -48,7 +48,7 @@
                     <h5>Franja horaria</h5>
                 </div> 
                 <div class="row row-form-post ">
-                    <select name="select" class="texto-form" name="franja_horaria">
+                    <select class="texto-form" name="franja_horaria">
                         <option value="value1" selected>9hs - 12hs</option>
                         <option value="value2">13hs - 17hs</option>
                     </select>
