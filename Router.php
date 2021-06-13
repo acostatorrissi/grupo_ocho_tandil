@@ -23,8 +23,12 @@
     
     //ABM Materiales
         //Alta
-    $r->addRoute("agregarMaterial", "GET", "admController", "addMaterial"); // view
-    $r->addRoute("nuevoMaterial", "POST", "admController", "newMaterial"); // funcion
+    $r->addRoute("agregarMaterial", "GET", "Controller", "addMaterial"); // view
+    $r->addRoute("nuevoMaterial", "POST", "Controller", "newMaterial"); // funcion
+
+    //Modificacion
+    $r->addRoute("editarMaterial/:ID", "GET", "Controller", "editarMaterial"); // view
+    $r->addRoute("editMaterial/:ID", "POST", "Controller", "editMaterial"); // funcion
 
     //ABM Registro-Login 
     $r->addRoute("registro", "GET", "UserController", "showRegistro");//vista de registrar

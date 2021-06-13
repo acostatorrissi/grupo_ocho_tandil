@@ -45,5 +45,10 @@ class View{
         $this->smarty->assign('msg', $msg);
         $this->smarty->display('template/login.tpl');
     }
+    function showEditarMaterial($material,$msg=''){
+        $this->smarty->assign('material',$material);
+        $this->smarty->assign('msg',$msg);//mensaje de error
+        $this->smarty->display('');
+    }
 }
 ?>
