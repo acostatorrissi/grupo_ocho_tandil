@@ -37,6 +37,11 @@ class Model{
         $sentencia->execute([$id]);
         return $sentencia->fetch(PDO::FETCH_OBJ);
     }
+
+    function borrarMaterial($id){
+        $sentencia = $this->db->prepare("DELETE FROM material WHERE id=?");
+        $sentencia->execute(array($id));
+    }
 }
 
 ?>

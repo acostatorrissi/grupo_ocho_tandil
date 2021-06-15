@@ -30,6 +30,9 @@
     $r->addRoute("editarMaterial/:ID", "GET", "Controller", "editarMaterial"); // view
     $r->addRoute("editMaterial/:ID", "POST", "Controller", "editMaterial"); // funcion
 
+    //Baja
+    $r->addRoute("borrarMaterial/:ID", "GET", "Controller", "borrarMaterial");
+
     //ABM Registro-Login 
     $r->addRoute("registro", "GET", "UserController", "showRegistro");//vista de registrar
     $r->addRoute("registrarse", "POST", "UserController", "registracion");//func de registrar
