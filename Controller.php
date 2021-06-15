@@ -114,6 +114,12 @@ class Controller{
             }
 
     }
+
+    function borrarMaterial($params = null){
+        $id = $params[':ID'];
+        $this->model->borrarMaterial($id);
+        $this->Materiales();
+    }
 }
 
 
