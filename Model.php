@@ -26,6 +26,17 @@ class Model{
         $sentencia = $this->db->prepare("INSERT INTO material(nombre,imagen_src,descripcion) VALUES(?,?,?)");
         $sentencia->execute(array($nombre,$img,$descripcion));
     }
+
+    function editarMaterial($nombre,$imagen,$id,$descripcion){
+        $sentencia = $this->db->prepare("UPDATE material SET nombre=?,imagen_src=?, descripcion=? WHERE id=?");
+        $sentencia->execute(array($nombre,$imagen,$id,$descripcion));
+    }
+    
+    function getMaterial($id){
+        $sentencia = $this->db->prepare( "SELECT * from material where id=?");
+        $sentencia->execute([$id]);
+        return $sentencia->fetch(PDO::FETCH_OBJ);
+    }
 }
 
 ?>

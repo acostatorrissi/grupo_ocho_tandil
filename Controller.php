@@ -82,6 +82,38 @@ class Controller{
     function addMaterial(){
         $this->view->ShowAddMaterial();
     }
+
+    function editarMaterial($params = null,$msg=''){ //muestra el tpl, no es el editar
+        $id = $params[':ID'];
+        $material = $this->model->getMaterial($id);
+        $this->view->showEditarMaterial($material,$msg);
+    }
+
+    function editMaterial($params){ //esta funcion es la que edita el material
+        
+        $id = $params[':ID'];
+        $nombre = $_POST['nombre'];
+        $rutaTemp = $_FILES['imagen']['tmp_name'];
+        $nombreImagen = $_FILES['imagen']['name'];
+        $descripcion = $_POST['descripcion'];
+
+        if($nombre!=''){
+            if($nombreImagen!=''){
+            $img = $this->uploadImage($rutaTemp,$nombreImagen);
+            }
+            else{
+                $img= $_POST['img'];
+            }
+            $this->model->editarMaterial($nombre,$img,$id,$descripcion);
+            $this->Materiales();
+            }
+        else{
+            $msg = "NOMBRE OBLIGATORIO";
+            $material = $this->model->getMaterial($id);
+            $this->view->showEditarMaterial($material,$msg);
+            }
+
+    }
 }
 
 
