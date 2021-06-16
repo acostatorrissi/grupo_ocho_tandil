@@ -19,8 +19,9 @@
         <div class="row row-nav-bar">
             <div class="col col-nav">
                 
-                <a href="">Nosotros</a>
-                <a href="">Materiales</a>
+                <a href="form-ciudadano">Nosotros</a>
+                <a href="materiales">Materiales</a>
+                <a href="lista-pedidos">Lista de Pedidos</a>
                 <a href="">Registrarse</a>
                 <a href="">Novedades</a>
                 <a href="">Login</a>
