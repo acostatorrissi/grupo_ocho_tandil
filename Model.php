@@ -42,6 +42,12 @@ class Model{
         $sentencia = $this->db->prepare("DELETE FROM material WHERE id=?");
         $sentencia->execute(array($id));
     }
+
+    function getPedidos(){
+        $query = $this->db->prepare("SELECT * FROM pedido");
+        $query->execute();
+        return  $query->fetchAll(PDO::FETCH_OBJ);
+    }
 }
 
 ?>

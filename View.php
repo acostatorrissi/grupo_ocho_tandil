@@ -55,7 +55,8 @@ class View{
         $this->smarty->display('');
     }
 
-    function ListaPedidos(){
+    function ListaPedidos($pedidos){
+        $this->smarty->assign('pedidos', $pedidos, false);
         $this->smarty->display('template/list-pedidos.tpl');
     }
 }
