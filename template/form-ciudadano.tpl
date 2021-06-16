@@ -24,6 +24,9 @@
                 <div class="row row-form-post">
                     <input type="text" class="texto-form" name="direccion">
                 </div>
+                <div class="row row-form-direccion-img">
+                    <img src="img/camino1.png" alt="mapa centro de acopio" id="mapa-centro-acopio">
+                </div>
                 <div class="row row-form-post-text">
                     <h5>Teléfono</h5>   
                 </div> 
@@ -34,14 +37,15 @@
                     <h5>Capacidad disponible</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <select class="select-form" name="volumen">
+                    <select class="texto-form" name="volumen">
                         <option value="value1">Entran en un baúl</option>
                         <option value="value2">Entra en una caja de camioneta</option>
                         <option value="value3">Entra en un camión</option>
                         <option value="value4">Entra en una caja</option>                         
                     </select>
-                    <input type="file" name="imagen_src">
- 
+                </div>
+                <div class="row row-form-post-text">
+                    <input class="col-titulo" type="file" name="imagen_src">
                 </div>
 
                 <div class="row row-form-post-text">
