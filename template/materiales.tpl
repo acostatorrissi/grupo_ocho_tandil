@@ -18,7 +18,8 @@
                             <p class="descripcion">{$material->descripcion}</p>                                                      
                         </div>   
                         <div>
-                            {if ($smarty.session) && ($smarty.session.ISADMIN) == 1}                 
+                            {if ($smarty.session) && ($smarty.session.ISADMIN) == 1} 
+                            <button class="btn-admin-borrar"><i class="fas fa-trash-alt"></i></button>                
                             {/if}
                         </div>                     
                     </div>                    
