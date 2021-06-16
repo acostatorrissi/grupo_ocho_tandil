@@ -28,7 +28,6 @@ class UserController{
     public function registracion(){
         $usuario = $_POST['usuario'];
         $contrasena = $_POST['contrasena'];
-       
         
         if(!empty($usuario)){
 
@@ -57,17 +56,23 @@ class UserController{
         }   
     } 
 
+    public function logout() {
+        $this->authHelper->logout();
+    }
 
     public function verifyLogin() {
         $usuario = $_POST['usuario'];
-        $contrasena = $_POST['contrasena'];
+        $contrasena = $_POST['contrasenia'];
+
+        echo($usuario);
+        echo($contrasena);
 
         // verifico campos obligatorios
         if (empty($usuario)||empty($contrasena)) {
             if (empty($usuario)) {
                 $msg = "NO INGRESO EL EMAIL";
             }
-            else if (empty($password)) {
+            else if (empty($contrasena)) {
                 $msg = "NO INGRESO LA CONTRASEÑA";
             }
             $this->view->ShowLogin($msg);
