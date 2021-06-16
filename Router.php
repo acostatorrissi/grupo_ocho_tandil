@@ -3,9 +3,11 @@
     require_once 'UserController.php';
     require_once 'RouterClass.php';
     
+    
     // CONSTANTES PARA RUTEO
     define('BASE_URL', 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
     define("Materiales", BASE_URL . 'materiales');
+    define("LOGIN", BASE_URL . 'login');
    
 
     $r = new Router();
@@ -41,10 +43,7 @@
     $r->addRoute("registro", "GET", "UserController", "showRegistro");//vista de registrar
     $r->addRoute("registrarse", "POST", "UserController", "registracion");//func de registrar
     $r->addRoute("verificar", "POST", "UserController", "verifyLogin");
-    $r->addRoute("login", "GET", "UserController", "showLogin");   
-    
-    
-   
+    $r->addRoute("login", "GET", "UserController", "showLogin"); 
     $r->addRoute("logout", "GET", "UserController", "logout");
    
     
