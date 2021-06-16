@@ -32,7 +32,18 @@
             die();
         }
 
-        
+        public function checkLoggedIn() {
+            if(isset($_SESSION["ID_USER"])){
+              if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 600)) {
+                $this->logout(); // destruye la sesión, y vuelve al login
+              }
+                $_SESSION['LAST_ACTIVITY'] = time(); // actualiza el último instante de actividad
+            }
+            else{
+                header('Location: '.LOGIN);
+                die();
+            } 
+        }
 
 
     }

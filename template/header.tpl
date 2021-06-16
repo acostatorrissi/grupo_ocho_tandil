@@ -22,9 +22,9 @@
                 <a href="form-ciudadano">Nosotros</a>
                 <a href="materiales">Materiales</a>
                 <a href="lista-pedidos">Lista de Pedidos</a>
-                <a href="">Registrarse</a>
+                <a href="registro">Registrarse</a>
                 <a href="">Novedades</a>
-                <a href="">Login</a>
+                <a href="login">Login</a>
                 
             </div>
         </div> 
