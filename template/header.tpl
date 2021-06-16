@@ -19,13 +19,17 @@
         <div class="row row-nav-bar">
             <div class="col col-nav">
                 
-                <a href="form-ciudadano">Nosotros</a>
+                <a href="form-ciudadano">Cargar Pedido</a>
                 <a href="materiales">Materiales</a>
+                {if ($smarty.session) && ($smarty.session.ISADMIN)==0} 
+                <a href="logout">Logout</a> 
+                {elseif ($smarty.session) && ($smarty.session.ISADMIN)==1}
                 <a href="lista-pedidos">Lista de Pedidos</a>
+                <a href="logout">Logout</a> 
+                {else}
                 <a href="registro">Registrarse</a>
-                <a href="">Novedades</a>
-                <a href="login">Login</a>
-                
+                <a href="login">Login</a>      
+                {/if}           
             </div>
         </div> 
     </div>

@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="row row-form-post">
-                        <input type="password" class="texto-form" name="contrasena">
+                        <input type="password" class="texto-form" name="contrasenia">
                     </div>  
                     <div class="row row-form-post">
                        {if $msg!=''}<div class="mensaje"><h5>{$msg}</h5></div>{/if} 
