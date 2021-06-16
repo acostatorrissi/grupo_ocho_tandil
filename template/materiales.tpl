@@ -30,7 +30,7 @@
             </div> 
             <div class="row box-elem-boton"> 
                 {if ($smarty.session) && ($smarty.session.ISADMIN) == 1 }
-                <input type="button" value="Agregar" class="btn-admin-agregar">  
+                <a href="agregarMaterial"><input type="button" value="Agregar" class="btn-admin-agregar"></a>
                 {/if}
             </div>
         </div>
