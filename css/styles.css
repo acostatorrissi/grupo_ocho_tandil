@@ -373,6 +373,18 @@ a:hover {
     align-items: center;
 }
 
+.row-form-direccion-img {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mapa-centro-acopio{
+    width: 75%; 
+}
+
 .row-form-post-text {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -534,8 +546,8 @@ a:hover {
     display: grid;
     column-gap: 65px;
     row-gap: 4px;
-    grid-template-rows: 412px 32px 32px 32px 32px 32px 32px 32px 32px 32px 32px 32px;
     grid-template-columns: 200px 1fr 200px;
+    overflow-y: scroll;  
 }
 .mensaje{
     margin-top: 20px;

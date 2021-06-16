@@ -94,7 +94,12 @@ ALTER TABLE `pedido`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
+CREATE TABLE user (
+  id int(50) NOT NULL,
+  usuario varchar(255) NOT NULL,
+  contrasenia varchar(500) NOT NULL,
+  admin int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
