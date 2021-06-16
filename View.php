@@ -54,5 +54,9 @@ class View{
         $this->smarty->assign('msg',$msg);//mensaje de error
         $this->smarty->display('');
     }
+
+    function ListaPedidos(){
+        $this->smarty->display('template/list-pedidos.tpl');
+    }
 }
 ?>

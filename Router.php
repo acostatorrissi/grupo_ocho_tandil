@@ -22,6 +22,8 @@
     $r->addRoute("insertPedido", "POST", "Controller", "insertarPedido");
 
     $r->addRoute("form-kilos", "GET", "Controller", "FormKilos");
+
+    $r->addRoute("lista-pedidos", "GET", "Controller", "ListaPedidos");
     
     //ABM Materiales
         //Alta
@@ -39,7 +41,7 @@
     $r->addRoute("registro", "GET", "UserController", "showRegistro");//vista de registrar
     $r->addRoute("registrarse", "POST", "UserController", "registracion");//func de registrar
     $r->addRoute("verificar", "POST", "UserController", "verifyLogin");
-    $r->addRoute("login", "GET", "UserController", "showLogin");
+    $r->addRoute("login", "GET", "UserController", "showLogin");   
     
     
    
