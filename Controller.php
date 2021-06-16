@@ -29,6 +29,16 @@ class Controller{
         $this->view->MostrarFormKilos();
     }
 
+    function insertKilogramos() {
+        $material = $_POST['material'];
+        $kilogramos = $_POST['kilogramos'];
+
+        if (!empty($material) && !empty($kilogramos)) {
+            $this->model->insertKilogramos($material, $kilogramos);
+        } 
+        $this->view->MostrarFormKilos();
+    }
+
     function Materiales() {
         $materiales = $this->model->getMateriales();
         $isAdmin = $this->authHelper->isAdmin();

@@ -27,6 +27,11 @@ class Model{
         $sentencia->execute(array($nombre,$img,$descripcion));
     }
 
+    function insertKilogramos($material, $kilogramos){
+        $sentencia = $this->db->prepare("INSERT INTO carga(tipo_material,kilogramos) VALUES (?,?)");
+        $sentencia->execute(array($material, $kilogramos));
+    }
+
     function editarMaterial($nombre,$imagen,$id,$descripcion){
         $sentencia = $this->db->prepare("UPDATE material SET nombre=?,imagen_src=?, descripcion=? WHERE id=?");
         $sentencia->execute(array($nombre,$imagen,$id,$descripcion));
