@@ -634,3 +634,26 @@ a:hover {
     font-size: 14px;   
     color: white;
 }
+
+/* Add Material*/
+
+.row-form-add {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #FDFDFD;
+    border-radius: 10px;
+    display: grid;
+    column-gap: 65px;
+    row-gap: 4px;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 120px;
+    overflow-y: scroll;  
+}
+
+.row-add {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
