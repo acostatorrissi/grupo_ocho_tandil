@@ -2,16 +2,19 @@
 
 require_once 'View.php';
 require_once 'Model.php';
+require_once './helpers/AuthHelper.php';
 
 class Controller{
 
     private $view;
     private $model;
+    private $autHelper;
 
     function __construct(){
 
         $this->view = new View();
         $this->model = new Model();
+        $this->authHelper = new AuthHelper();
     }
 
     function Home() {
@@ -28,7 +31,8 @@ class Controller{
 
     function Materiales() {
         $materiales = $this->model->getMateriales();
-        $this->view->MostrarMateriales($materiales);
+        $isAdmin = $this->authHelper->isAdmin();
+        $this->view->MostrarMateriales($materiales, $isAdmin);
     }
     
     function ListaPedidos() {

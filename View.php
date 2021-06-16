@@ -28,8 +28,9 @@ class View{
         $this->smarty->display('template/form-kilos.tpl');
     }
 
-    function MostrarMateriales($materiales) {
-        $this->smarty->assign('materiales', $materiales, false);
+    function MostrarMateriales($materiales, $isAdmin) {
+        $this->smarty->assign('materiales', $materiales);
+        $this->smarty->assign('ISADMIN', $isAdmin);
         $this->smarty->assign('cont', count($materiales));
         $this->smarty->display('template/materiales.tpl');  
     }

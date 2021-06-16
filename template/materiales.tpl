@@ -9,21 +9,27 @@
                
                 {$n = 1}
                 {foreach from=$materiales item=material}
-                    <div class="row box-elem{$n}"> 
-                        <div class="box-img">
+                    <div class="row box-elem{$n}">
+                        <div class="box-img">                            
                            <img src="{$material->imagen_src}" alt="lata-reciclaje" id="lata-reciclaje">
                         </div> 
                         <div class="box-elem">                    
                             <h5 class="titulo">{$material->nombre}</h5>
-                            <p class="descripcion">{$material->descripcion}</p>
-                        </div>  
-                    </div>
+                            <p class="descripcion">{$material->descripcion}</p>                                                      
+                        </div>   
+                        <div>
+                            {if ($smarty.session) && ($smarty.session.ISADMIN) == 1}                 
+                            {/if}
+                        </div>                     
+                    </div>                    
                     {$n=$n+1}
                 {/foreach}
                
             </div> 
             <div class="row box-elem-boton"> 
-                
+                {if ($smarty.session) && ($smarty.session.ISADMIN) == 1 }
+                <input type="button" value="Agregar" class="btn-admin-agregar">  
+                {/if}
             </div>
         </div>
     </div>
