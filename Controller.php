@@ -30,9 +30,10 @@ class Controller{
         $materiales = $this->model->getMateriales();
         $this->view->MostrarMateriales($materiales);
     }
-
+    
     function ListaPedidos() {
-        $this->view->ListaPedidos();
+        $pedidos = $this->model->getPedidos();
+        $this->view->ListaPedidos($pedidos);
     }
    
     function insertarPedido(){
