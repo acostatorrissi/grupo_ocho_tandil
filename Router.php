@@ -20,6 +20,8 @@
     $r->addRoute("form-ciudadano", "GET", "Controller", "FormCiudadano");
     
     $r->addRoute("insertPedido", "POST", "Controller", "insertarPedido");
+
+    $r->addRoute("form-kilos", "GET", "Controller", "FormKilos");
     
     //ABM Materiales
         //Alta
