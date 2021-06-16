@@ -19,7 +19,7 @@
         <div class="row row-nav-bar">
             <div class="col col-nav">
                 
-                <a href="form-ciudadano">Nosotros</a>
+                <a href="form-ciudadano">Cargar Pedido</a>
                 <a href="materiales">Materiales</a>
                 {if ($smarty.session) && ($smarty.session.ISADMIN)==0} 
                 <a href="logout">Logout</a> 
