@@ -11,7 +11,6 @@ class Controller{
     private $autHelper;
 
     function __construct(){
-
         $this->view = new View();
         $this->model = new Model();
         $this->authHelper = new AuthHelper();
@@ -51,7 +50,6 @@ class Controller{
     }
    
     function insertarPedido(){
-
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $direccion = $_POST['direccion'];
