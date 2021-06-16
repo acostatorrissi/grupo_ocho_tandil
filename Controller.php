@@ -22,6 +22,10 @@ class Controller{
         $this->view->MostrarFormCiudadano();
     }
 
+    function FormKilos() {
+        $this->view->MostrarFormKilos();
+    }
+
     function Materiales() {
         $materiales = $this->model->getMateriales();
         $this->view->MostrarMateriales($materiales);

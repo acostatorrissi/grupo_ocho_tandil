@@ -24,6 +24,10 @@ class View{
         $this->smarty->display('template/form-ciudadano.tpl');  
     }
 
+    function MostrarFormKilos() {
+        $this->smarty->display('template/form-kilos.tpl');
+    }
+
     function MostrarMateriales($materiales) {
         $this->smarty->assign('materiales', $materiales, false);
         $this->smarty->assign('cont', count($materiales));
