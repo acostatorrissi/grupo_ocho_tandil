@@ -13,7 +13,7 @@
     $r = new Router();
 
     //Ruta por defecto.
-    $r->setDefaultRoute("Controller", "Home");
+    $r->setDefaultRoute("Controller", "Materiales");
 
     $r->addRoute("home", "GET", "Controller", "Home");
 

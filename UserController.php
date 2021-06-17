@@ -90,7 +90,7 @@ class UserController{
             }
             else if($user && $passTrue){
                 $this->authHelper->login($user);//creo la sesion 
-                header('Location: ' . BASE_URL);
+                header('Location: ' . Materiales);
             }
         }
         else{
