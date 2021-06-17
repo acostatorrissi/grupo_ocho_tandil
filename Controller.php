@@ -11,7 +11,6 @@ class Controller{
     private $autHelper;
 
     function __construct(){
-
         $this->view = new View();
         $this->model = new Model();
         $this->authHelper = new AuthHelper();
@@ -29,6 +28,16 @@ class Controller{
         $this->view->MostrarFormKilos();
     }
 
+    function insertKilogramos() {
+        $material = $_POST['material'];
+        $kilogramos = $_POST['kilogramos'];
+
+        if (!empty($material) && !empty($kilogramos)) {
+            $this->model->insertKilogramos($material, $kilogramos);
+        } 
+        $this->view->MostrarFormKilos();
+    }
+
     function Materiales() {
         $materiales = $this->model->getMateriales();
         $isAdmin = $this->authHelper->isAdmin();
@@ -41,7 +50,6 @@ class Controller{
     }
    
     function insertarPedido(){
-
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $direccion = $_POST['direccion'];

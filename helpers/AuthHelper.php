@@ -23,7 +23,7 @@
             if(!empty($_SESSION)){
                 $isAdmin = $_SESSION['ISADMIN'];
              }
-             return $isAdmin;
+            return $isAdmin;
         }
 
         public function logout() {

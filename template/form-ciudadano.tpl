@@ -22,7 +22,10 @@
                     <h5>Domicilio</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <input type="text" class="texto-form" name="direccion">
+                    <input type="text" class="texto-form" name="direccion" id="input-domicilio">
+                </div>
+                <div class="row row-form-direccion-img">
+                    <img src="img/camino1.png" alt="mapa centro de acopio" id="mapa-centro-acopio">
                 </div>
                 <div class="row row-form-post-text">
                     <h5>Teléfono</h5>   
@@ -34,16 +37,16 @@
                     <h5>Capacidad disponible</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <select class="select-form" name="volumen">
+                    <select class="texto-form" name="volumen">
                         <option value="value1">Entran en un baúl</option>
                         <option value="value2">Entra en una caja de camioneta</option>
                         <option value="value3">Entra en un camión</option>
                         <option value="value4">Entra en una caja</option>                         
                     </select>
-                    <input type="file" name="imagen_src">
- 
                 </div>
-
+                <div class="row row-form-post-text">
+                    <input class="col-titulo" type="file" name="imagen_src">
+                </div>
                 <div class="row row-form-post-text">
                     <h5>Franja horaria</h5>
                 </div> 
@@ -64,5 +67,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/0858cbf469.js"></script>
+    <script src="js/script-ciudadano.js"></script>
 </body>
 </html>

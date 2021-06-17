@@ -38,7 +38,7 @@ class View{
         header("Location: ".BASE_URL."form-ciudadano");
     }
     function ShowAddMaterial(){
-        $this->smarty->display('');
+        $this->smarty->display('template/add-material.tpl');
     }
 
     function showRegistro($msg = ''){

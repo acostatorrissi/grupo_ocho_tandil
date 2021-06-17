@@ -3,9 +3,11 @@
     require_once 'UserController.php';
     require_once 'RouterClass.php';
     
+    
     // CONSTANTES PARA RUTEO
     define('BASE_URL', 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
     define("Materiales", BASE_URL . 'materiales');
+    define("LOGIN", BASE_URL . 'login');
    
 
     $r = new Router();
@@ -21,7 +23,8 @@
     
     $r->addRoute("insertPedido", "POST", "Controller", "insertarPedido");
 
-    $r->addRoute("form-kilos", "GET", "Controller", "FormKilos");
+    $r->addRoute("form-kilos", "GET", "Controller", "FormKilos"); // view
+    $r->addRoute("insertKilogramoMaterial", "POST", "Controller", "insertKilogramos"); // funcion
 
     $r->addRoute("lista-pedidos", "GET", "Controller", "ListaPedidos");
     
@@ -41,10 +44,7 @@
     $r->addRoute("registro", "GET", "UserController", "showRegistro");//vista de registrar
     $r->addRoute("registrarse", "POST", "UserController", "registracion");//func de registrar
     $r->addRoute("verificar", "POST", "UserController", "verifyLogin");
-    $r->addRoute("login", "GET", "UserController", "showLogin");   
-    
-    
-   
+    $r->addRoute("login", "GET", "UserController", "showLogin"); 
     $r->addRoute("logout", "GET", "UserController", "logout");
    
     

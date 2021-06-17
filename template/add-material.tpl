@@ -14,14 +14,13 @@
                     <input type="text" class="texto-form" name="descripcion">
                     <h4>Imagen</h4>
                     <input class="col-titulo" type="file" name="imagen">
-                
+                    <div class="row box-elem-boton">
+                        <button type="submit" class="btn-elem-publicar-aviso">Agregar Material</button>
+                    </div>
+                 </form>  
             </div>
-
-        <div class="row box-elem-boton"> 
-            <button type="submit" class="btn-elem-publicar-aviso">Agregar Material</button>
-            </form>
-        </div>
-    </form>
+        </div>      
+    </div>          
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

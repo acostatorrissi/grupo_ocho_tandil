@@ -10,38 +10,26 @@
                     <h5>Nombre</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <input type="text" class="texto-form" name="nombre">
+                    <h5 class="texto-form">Carlos</h5>
                 </div>
                 <div class="row row-form-post-text">
                     <h5>Apellido</h5>   
                 </div> 
                 <div class="row row-form-post">
-                    <input type="text" class="texto-form" name="apellido">
+                    <h5 class="texto-form">Baute</h5>
                 </div>   
-                <div class="row row-form-post-text">
-                    <h5>Domicilio</h5>   
-                </div> 
-                <div class="row row-form-post">
-                    <input type="text" class="texto-form" name="direccion">
-                </div>
-                <div class="row row-form-post-text">
-                    <h5>Teléfono</h5>   
-                </div> 
-                <div class="row row-form-post">
-                    <input type="text" class="texto-form" name="telefono">
-                </div>
                 <div class="row row-form-post-text">
                     <h5>Material</h5>   
                 </div> 
                 <div class="row row-form-post">
                     <select class="select-form" name="material">
-                        <option value="value1">Vidrio</option>
-                        <option value="value2">Cartón</option>
-                        <option value="value3">Aluminio</option>
-                        <option value="value4">Plástico</option>
-                        <option value="value4">Latas</option>  
-                        <option value="value4">Papel</option>  
-                        <option value="value4">Tetrabrik</option>                           
+                        <option value="Vidrio">Vidrio</option>
+                        <option value="Cartón">Cartón</option>
+                        <option value="Aluminio">Aluminio</option>
+                        <option value="Plástico">Plástico</option>
+                        <option value="Latas">Latas</option>  
+                        <option value="Papel">Papel</option>  
+                        <option value="Tetrabrik">Tetrabrik</option>                           
                     </select>
                 </div>
                  <div class="row row-form-post-text">
@@ -49,12 +37,6 @@
                 </div> 
                 <div class="row row-form-post">
                     <input type="text" class="texto-form" name="kilogramos">
-                </div>
-                <div class="row row-form-post-text">
-                    <h5>¿Sos vecino buena onda?</h5>   
-                </div> 
-                <div class="row row-form-post">
-                    <input type="checkbox" class="texto-form" name="telefono">
                 </div>
             </div> 
             <div class="row box-elem-boton"> 

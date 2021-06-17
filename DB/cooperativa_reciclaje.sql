@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-06-2021 a las 18:09:48
--- Versión del servidor: 10.4.19-MariaDB
--- Versión de PHP: 8.0.6
+-- Tiempo de generación: 17-06-2021 a las 00:16:17
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `cooperativa_reciclaje`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carga`
+--
+
+CREATE TABLE `carga` (
+  `tipo_material` varchar(50) NOT NULL,
+  `kilogramos` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `carga`
+--
+
+INSERT INTO `carga` (`tipo_material`, `kilogramos`) VALUES
+('Vidrio', 1234),
+('Cartón', 257);
 
 -- --------------------------------------------------------
 
@@ -75,6 +94,19 @@ INSERT INTO `pedido` (`id_pedido`, `nombre`, `apellido`, `direccion`, `telefono`
 (5, 'Marcela', 'Martinez', 'Las Heras 150', '2494111111', '', '9hs - 14hs', 'Entran en una caja de camioneta'),
 (6, 'Susana', 'Perez', 'Lisandro de la Torre 1400', '2494872832', '', '10hs - 15hs', 'Entran en un baúl');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(50) NOT NULL,
+  `usuario` varchar(255) NOT NULL,
+  `contrasenia` varchar(500) NOT NULL,
+  `admin` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Índices para tablas volcadas
 --
@@ -90,16 +122,6 @@ ALTER TABLE `material`
 --
 ALTER TABLE `pedido`
   ADD PRIMARY KEY (`id_pedido`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `pedido`
---
-ALTER TABLE `pedido`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
