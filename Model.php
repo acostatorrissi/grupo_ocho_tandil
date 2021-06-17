@@ -32,9 +32,9 @@ class Model{
         $sentencia->execute(array($material, $kilogramos));
     }
 
-    function editarMaterial($nombre,$imagen,$id,$descripcion){
+    function editarMaterial($nombre,$img,$descripcion,$id){
         $sentencia = $this->db->prepare("UPDATE material SET nombre=?,imagen_src=?, descripcion=? WHERE id=?");
-        $sentencia->execute(array($nombre,$imagen,$id,$descripcion));
+        $sentencia->execute(array($nombre,$img,$descripcion,$id));
     }
     
     function getMaterial($id){

@@ -104,14 +104,14 @@ class Controller{
         $this->view->ShowAddMaterial();
     }
 
-    function editarMaterial($params = null,$msg=''){ //muestra el tpl, no es el editar
+   /* function editarMaterial($params = null,$msg=''){ //muestra el tpl, no es el editar
         $id = $params[':ID'];
         $material = $this->model->getMaterial($id);
         $this->view->showEditarMaterial($material,$msg);
-    }
+    }*/
 
-    function editMaterial($params){ //esta funcion es la que edita el material
-        
+    function editMaterial($params = null){ //esta funcion es la que edita el material
+        $this->authHelper->checkLoggedIn();
         $id = $params[':ID'];
         $nombre = $_POST['nombre'];
         $rutaTemp = $_FILES['imagen']['tmp_name'];
@@ -120,27 +120,30 @@ class Controller{
 
         if($nombre!=''){
             if($nombreImagen!=''){
-            $img = $this->uploadImage($rutaTemp,$nombreImagen);
+                $img = $this->uploadImage($rutaTemp,$nombreImagen);
             }
             else{
                 $img= $_POST['img'];
             }
-            $this->model->editarMaterial($nombre,$img,$id,$descripcion);
-            $this->Materiales();
+            $this->model->editarMaterial($nombre,$img,$descripcion,$id);
+            //$this->view->showEditarMaterial($material,$msg);
+           
             }
         else{
             $msg = "NOMBRE OBLIGATORIO";
             $material = $this->model->getMaterial($id);
             $this->view->showEditarMaterial($material,$msg);
             }
-
+            //$this->Materiales();
+        header('Location: '.Materiales);
     }
 
     function borrarMaterial($params = null){
         $id = $params[':ID'];
         $this->model->borrarMaterial($id);
-        $this->Materiales();
+        header('Location: '.Materiales);
     }
+   
 }
 
 

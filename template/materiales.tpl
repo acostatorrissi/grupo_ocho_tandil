@@ -9,9 +9,10 @@
                
                 {$n = 1}
                 {foreach from=$materiales item=material}
+                  
                     <div class="row box-elem{$n}">
                         <div class="box-img">                            
-                           <img src="{$material->imagen_src}" alt="lata-reciclaje" id="lata-reciclaje">
+                           <img src="img/{$material->imagen_src}" alt="lata-reciclaje" id="lata-reciclaje">
                         </div> 
                         <div class="box-elem">                    
                             <h5 class="titulo">{$material->nombre}</h5>
@@ -19,14 +20,43 @@
                         </div>   
                         <div>
                             {if ($smarty.session) && ($smarty.session.ISADMIN) == 1} 
-                            <button class="btn-admin-borrar"><i class="fas fa-trash-alt"></i></button> 
-                            <button class="btn-admin-editar"><i class="fas fa-pen"></i></i></button>
+                            <button class="btn-admin-borrar"><a href="borrarMaterial/{$material->id}"><i class="fas fa-trash-alt"></i></a> </button>
+                            <button type="button" class="btn-admin-editar" data-toggle="modal" data-target="#modificar{$material->id}" aria-expanded="false"><i class="far fa-edit"></i></button>
                             {/if}
                         </div>                     
-                    </div>                    
+                    </div> 
+                    <div class="modal fade" id="modificar{$material->id}" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content ">
+                                <form class="form-inline" action="editMaterial/{$material->id}" method="POST" enctype="multipart/form-data">
+                                    <div class="modal-header">
+
+                                        <h5 class="modal-title"   >   Editar:  "{$material->nombre}"</h5>
+                                        
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="nombre" class="text-dark">Material:</label>
+                                            <input type="text" class="form-control" name="nombre" value={$material->nombre} required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="descripcion" class="text-dark">Descripción:</label>
+                                            <input type="text" class="form-control" name="descripcion" value={$material->descripcion} required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="imagen" class="text-dark">Imagen</label>
+                                            <input class="form-control" type="file" name="imagen">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Comfirmar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div> 
                     {$n=$n+1}
                 {/foreach}
-               
             </div> 
             <div class="row box-elem-boton"> 
                 {if ($smarty.session) && ($smarty.session.ISADMIN) == 1 }

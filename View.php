@@ -53,7 +53,7 @@ class View{
     function showEditarMaterial($material,$msg=''){
         $this->smarty->assign('material',$material);
         $this->smarty->assign('msg',$msg);//mensaje de error
-        $this->smarty->display('');
+        $this->smarty->display('template/edit-material.tpl');
     }
 
     function ListaPedidos($pedidos){
