@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-06-2021 a las 15:57:43
+-- Tiempo de generación: 17-06-2021 a las 17:34:55
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -58,13 +58,12 @@ CREATE TABLE `material` (
 --
 
 INSERT INTO `material` (`id`, `nombre`, `imagen_src`, `descripcion`) VALUES
-(3, 'Envases de aluminio', 'https://www.ambientum.com/wp-content/uploads/2019/11/envases-latas-696x460.jpg', 'Se aceptarán todo tipo de latas de aluminio. Deben estar secas y aplastadas.'),
-(4, 'Envases plásticos', 'https://ichef.bbci.co.uk/news/640/cpsprodpb/C6DF/production/_97011905_gettyimages-103583960-1.jpg', 'Se aceptar plásticos derivados de botellas, (no se aceptarán envases de yogurt o queso blanco). Se deberá entregar limpias, secas y aplastadas.'),
-(5, 'Latas de conserva', 'https://i.blogs.es/7e2930/reciclar8/1366_2000.jpg', 'Se aceptarán todo tipo de latas. Deben estar secas y aplastadas, y no deben contener sus respectivas etiquetas.'),
-(6, 'Papel', 'https://www.elagoradiario.com/wp-content/uploads/2019/07/Monta%C3%B1a-de-papel-1140x600.jpg', 'Se aceptar cualquier tipo de papel (revistas, diarios, envoltorios, etc.). Se deberá entregar seco y sujetado con hilo.'),
-(7, 'Tetrabrik', 'https://www.expoknews.com/wp-content/uploads/2019/05/Reciclado-de-tetrapack-en-buen-camino-pero-con-grandes-retos-1.jpg', 'Todo envase de este material será aceptado (bebidas y alimentos). Deberán ser entregados limpios, secos y aplastados.'),
-(8, 'Chapa', '60caa9943e40c.png', 'jfdhjhfdjhjfdhn'),
-(10, 'Leandro Javier', '60cab57598156.png', 'jfdhjhfdjhjfdhn');
+(3, 'Envases de aluminio', '60cb5e61dfccd.jpeg', 'Se aceptarán todo tipo de latas de aluminio. Deben estar secas y aplastadas.'),
+(4, 'Envases plásticos', '60cb5dd943915.jpeg', 'Se aceptar plásticos derivados de botellas, (no se aceptarán envases de yogurt o queso blanco). Se deberá entregar limpias, secas y aplastadas.'),
+(5, 'Latas de conserva', '60cb6081a6f42.png', 'Se aceptarán todo tipo de latas. Deben estar secas y aplastadas, y no deben contener sus respectivas etiquetas.'),
+(6, 'Papel', '60cb5da1a84c6.jpeg', 'Se aceptar cualquier tipo de papel (revistas, diarios, envoltorios, etc.). Se deberá entregar seco y sujetado con hilo.'),
+(7, 'Tetrabrik', '60cb5e2ea7fbd.jpeg', 'Todo envase de este material será aceptado (bebidas y alimentos). Deberán ser entregados limpios, secos y aplastados.'),
+(12, 'Cartón', '60cb5e9166fc7.jpeg', 'Se aceptar cualquier tipo de cartón (cajas, bolsas que sean de este material, etc.). Se deberá entregar seco, limpio y en el caso de las cajas, tendrán que estar desarmadas. Todo sujetado con hilo.');
 
 -- --------------------------------------------------------
 
@@ -113,7 +112,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `usuario`, `contrasenia`, `admin`) VALUES
-(0, 'admin3', '$2y$10$Izpndp/bKfhhY5Xm7JtfmuwAwGAALJRFz9laGuFT9tJGrgYa.x4Wm', 1);
+(1, 'admin3', '$2y$10$Izpndp/bKfhhY5Xm7JtfmuwAwGAALJRFz9laGuFT9tJGrgYa.x4Wm', 1),
+(2, 'usuariouno', '$2y$10$/eNzXljMb5JLQUxt69FJuOSYB5cNOa5mrd/chewVhCMU4iwRRvv/S', 0);
 
 --
 -- Índices para tablas volcadas
@@ -145,7 +145,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `material`
 --
 ALTER TABLE `material`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
