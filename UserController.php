@@ -27,7 +27,7 @@ class UserController{
 
     public function registracion(){
         $usuario = $_POST['usuario'];
-        $contrasena = $_POST['contrasena'];
+        $contrasena = $_POST['contrasenia'];
         
         if(!empty($usuario)){
 
