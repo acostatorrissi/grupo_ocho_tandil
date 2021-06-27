@@ -25,6 +25,8 @@
                 <a href="logout">Logout</a> 
                 {elseif ($smarty.session) && ($smarty.session.ISADMIN)==1}
                 <a href="lista-pedidos">Lista de Pedidos</a>
+                <a href="lista-cartoneros">Lista de Cartoneros</a>
+                <a href="form-cartonero">Registrar Cartonero</a>
                 <a href="logout">Logout</a> 
                 {else}
                 <a href="registro">Registrarse</a>
