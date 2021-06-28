@@ -135,34 +135,34 @@ class Controller{
         $this->authHelper->checkLoggedIn();
         $id = $params[':ID'];
         $nombre = $_POST['nombre'];
-        $rutaTemp = $_FILES['imagen']['tmp_name'];
-        $nombreImagen = $_FILES['imagen']['name'];
-        $descripcion = $_POST['descripcion'];
-
-        if($nombre!=''){
-            if($nombreImagen!=''){
-                $img = $this->uploadImage($rutaTemp,$nombreImagen);
-            }
-            else{
-                $img= $_POST['img'];
-            }
-            $this->model->editarMaterial($nombre,$img,$descripcion,$id);
-            //$this->view->showEditarMaterial($material,$msg);
-           
-            }
+        $apellido = $_POST['apellido'];
+        $dni = $_POST['dni'];
+        $direccion = $_POST['direccion'];
+        $fechaNacimiento = $_POST['fechaNAcimiento']
+        $tipoVehiculo = $_POST['tipoVehiculo']
+       
+        if($nombre !='' && $apellido !='' && $dni !='' && $direccion !='' && $fechaNacimiento !='' && $tipoVehiculo !=''){
+            $this->model->editarCartonero($nombre, $apellido, $dni, $direccion, $fechaNacimiento, $tipoVehiculo);
+        }
         else{
-            $msg = "NOMBRE OBLIGATORIO";
-            $material = $this->model->getMaterial($id);
-            $this->view->showEditarMaterial($material,$msg);
-            }
-            //$this->Materiales();
-        header('Location: '.Materiales);
+            $msg = "COMPLETE TODOS LOS CAMPOS";
+            $cartonero = $this->model->getCartonero($id);
+            $this->view->showEditarCartonero($cartonero,$msg);
+        }
+
+        header('Location: '.Cartoneros);
     }
 
     function borrarMaterial($params = null){
         $id = $params[':ID'];
         $this->model->borrarMaterial($id);
         header('Location: '.Materiales);
+    }
+
+    function editarCartonero($params = null){
+        $this->authHelper->checkLoggedIn();
+        $id = $params[':ID'];
+
     }
    
 }
