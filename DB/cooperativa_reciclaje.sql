@@ -60,7 +60,7 @@ CREATE TABLE `cartonero` (
 --
 INSERT INTO `cartonero` (`nombre`, `apellido`, `dni`, `direccion`, `fechaNacimiento`, `vehiculo`) VALUES
 ('Miguel Angel', 'Gallardo', 23456789, 'Curucuatia 1345', '17/06/1981', 'Automovil');
-
+('Andres', 'Confortovich', 37234456, 'Del Valle 687', '20/06/1993', 'Moto');
 -- --------------------------------------------------------
 
 --
