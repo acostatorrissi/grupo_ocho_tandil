@@ -1,28 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.0
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 17-06-2021 a las 17:34:55
--- Versión del servidor: 10.4.18-MariaDB
--- Versión de PHP: 8.0.3
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `cooperativa_reciclaje`
---
-
--- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `carga`
 --
@@ -65,6 +40,27 @@ INSERT INTO `material` (`id`, `nombre`, `imagen_src`, `descripcion`) VALUES
 (7, 'Tetrabrik', '60cb5e2ea7fbd.jpeg', 'Todo envase de este material será aceptado (bebidas y alimentos). Deberán ser entregados limpios, secos y aplastados.'),
 (12, 'Cartón', '60cb5e9166fc7.jpeg', 'Se aceptar cualquier tipo de cartón (cajas, bolsas que sean de este material, etc.). Se deberá entregar seco, limpio y en el caso de las cajas, tendrán que estar desarmadas. Todo sujetado con hilo.');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cartonero`
+--
+
+CREATE TABLE `cartonero` (
+  `nombre` varchar(200) NOT NULL,
+  `apellido` varchar(200) NOT NULL,
+  `dni` int(8) NOT NULL,
+  `direccion` varchar(200) NOT NULL,
+  `fechaNacimiento` varchar(50) NOT NULL,
+  `vehiculo` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `pedido`
+--
+INSERT INTO `cartonero` (`nombre`, `apellido`, `dni`, `direccion`, `fechaNacimiento`, `vehiculo`) VALUES
+('Miguel Angel', 'Gallardo', 23456789, 'Curucuatia 1345', '17/06/1981', 'Automovil');
+('Andres', 'Confortovich', 37234456, 'Del Valle 687', '20/06/1993', 'Moto');
 -- --------------------------------------------------------
 
 --
@@ -112,7 +108,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `usuario`, `contrasenia`, `admin`) VALUES
-(1, 'admin3', '$2y$10$Izpndp/bKfhhY5Xm7JtfmuwAwGAALJRFz9laGuFT9tJGrgYa.x4Wm', 1),
+(3, 'admin', '$2y$10$1Pu7LZCnKSYnVdlSPeDwrOJWDOkOM.cePH.5NoT70C9IVH8EN4IX.', 1);
 (2, 'usuariouno', '$2y$10$/eNzXljMb5JLQUxt69FJuOSYB5cNOa5mrd/chewVhCMU4iwRRvv/S', 0);
 
 --
@@ -130,7 +126,11 @@ ALTER TABLE `material`
 --
 ALTER TABLE `pedido`
   ADD PRIMARY KEY (`id_pedido`);
-
+--
+-- Indices de la tabla `pedido`
+--
+ALTER TABLE `cartonero`
+  ADD PRIMARY KEY (`dni`);
 --
 -- Indices de la tabla `user`
 --
@@ -153,7 +153,3 @@ ALTER TABLE `material`
 ALTER TABLE `user`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

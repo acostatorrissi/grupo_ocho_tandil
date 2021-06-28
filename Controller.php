@@ -24,6 +24,10 @@ class Controller{
         $this->view->MostrarFormCiudadano();
     }
 
+    function FormCartonero() {
+        $this->view->MostrarFormCartonero();
+    }
+
     function FormKilos() {
         $this->view->MostrarFormKilos();
     }
@@ -73,6 +77,23 @@ class Controller{
             $this->model->insertPedido($nombre,$apellido,$direccion,$telefono,$img,$franja_horaria,$volumen);
             }
          $this->view->FormularioLocation();
+    }
+
+    function insertarCartonero(){
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];
+        $dni = $_POST['dni'];
+        $direccion = $_POST['direccion'];
+        $fechaNacimiento = $_POST['fechaNacimiento'];
+        $vehiculo = $_POST['vehiculo'];
+
+        if (!empty($nombre)&&!empty($apellido)&&!empty($direccion)
+            &&!empty($dni)&&!empty($fechaNacimiento)&&!empty($vehiculo)) {
+
+            $this->model->insertCartonero($nombre,$apellido,$dni,$direccion,$fechaNacimiento,$vehiculo);
+        }
+        //TODO redirigir al listado de cartoneros
+         $this->view->FormularioCartoneroLocation();
     }
 
     function uploadImage($rutaTemp,$nombreImagen){

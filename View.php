@@ -24,6 +24,10 @@ class View{
         $this->smarty->display('template/form-ciudadano.tpl');  
     }
 
+    function MostrarFormCartonero() {
+        $this->smarty->display('template/form-cartonero.tpl');  
+    }
+
     function MostrarFormKilos() {
         $this->smarty->display('template/form-kilos.tpl');
     }
@@ -34,9 +38,15 @@ class View{
         $this->smarty->assign('cont', count($materiales));
         $this->smarty->display('template/materiales.tpl');  
     }
+
     function FormularioLocation(){
         header("Location: ".BASE_URL."form-ciudadano");
     }
+
+    function FormularioCartoneroLocation(){
+        header("Location: ".BASE_URL."form-cartonero");
+    }
+
     function ShowAddMaterial(){
         $this->smarty->display('template/add-material.tpl');
     }
