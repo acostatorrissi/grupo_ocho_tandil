@@ -59,7 +59,7 @@ CREATE TABLE `cartonero` (
 -- Volcado de datos para la tabla `pedido`
 --
 INSERT INTO `cartonero` (`nombre`, `apellido`, `dni`, `direccion`, `fechaNacimiento`, `vehiculo`) VALUES
-('Miguel Angel', 'Gallardo', 23456789, 'Curucuatia 1345', '17/06/1981', 'value3');
+('Miguel Angel', 'Gallardo', 23456789, 'Curucuatia 1345', '17/06/1981', 'Automovil');
 
 -- --------------------------------------------------------
 
