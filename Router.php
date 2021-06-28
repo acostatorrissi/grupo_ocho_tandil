@@ -37,6 +37,9 @@
     $r->addRoute("editarMaterial/:ID", "GET", "Controller", "editarMaterial"); // view
     $r->addRoute("editMaterial/:ID", "POST", "Controller", "editMaterial"); // funcion
 
+    $r->addRoute("editCartonero/:ID", "POST", "Controller", "editarCartonero");
+
+
     //Baja
     $r->addRoute("borrarMaterial/:ID", "GET", "Controller", "borrarMaterial");
 
