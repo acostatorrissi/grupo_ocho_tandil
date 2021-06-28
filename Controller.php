@@ -24,6 +24,10 @@ class Controller{
         $this->view->MostrarFormCiudadano();
     }
 
+    function FormCartonero() {
+        $this->view->MostrarFormCartonero();
+    }
+
     function FormKilos() {
         $this->view->MostrarFormKilos();
     }
