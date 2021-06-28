@@ -21,7 +21,12 @@ class Model{
         $sentencia = $this->db->prepare("INSERT INTO pedido(nombre,apellido,direccion,telefono,imagen_src,franja_horaria,volumen) VALUES(?,?,?,?,?,?,?)");
         $sentencia->execute(array($nombre,$apellido,$direccion,$telefono,$img,$franja_horaria,$volumen));
     }
-    
+
+    function insertCartonero($nombre,$apellido,$dni,$direccion,$fechaNacimiento,$vehiculo){
+        $sentencia = $this->db->prepare("INSERT INTO cartonero(nombre,apellido,dni,direccion,fechaNacimiento,vehiculo) VALUES(?,?,?,?,?,?)");
+        $sentencia->execute(array($nombre,$apellido,$dni,$direccion,$fechaNacimiento,$vehiculo));
+    }
+
     function insertMaterial($nombre,$img,$descripcion){
         $sentencia = $this->db->prepare("INSERT INTO material(nombre,imagen_src,descripcion) VALUES(?,?,?)");
         $sentencia->execute(array($nombre,$img,$descripcion));

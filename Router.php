@@ -24,6 +24,7 @@
     $r->addRoute("form-cartonero", "GET", "Controller", "FormCartonero");
 
     $r->addRoute("insertPedido", "POST", "Controller", "insertarPedido");
+    $r->addRoute("insertCartonero", "POST", "Controller", "insertarCartonero");
 
     $r->addRoute("form-kilos", "GET", "Controller", "FormKilos"); // view
     $r->addRoute("insertKilogramoMaterial", "POST", "Controller", "insertKilogramos"); // funcion
