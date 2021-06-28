@@ -40,10 +40,10 @@
                 </div> 
                 <div class="row row-form-post">
                     <select class="texto-form" name="vehiculo">
-                        <option value="value1">Automovil</option>
-                        <option value="value2">Moto</option>
-                        <option value="value3">Camioneta</option>
-                        <option value="value4">Camion</option>                         
+                        <option value="Automovil">Automovil</option>
+                        <option value="Moto">Moto</option>
+                        <option value="Camioneta">Camioneta</option>
+                        <option value="Camion">Camion</option>                         
                     </select>
                 </div>
             </div> 
