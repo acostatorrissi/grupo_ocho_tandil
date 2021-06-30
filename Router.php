@@ -30,6 +30,8 @@
     $r->addRoute("insertKilogramoMaterial", "POST", "Controller", "insertKilogramos"); // funcion
 
     $r->addRoute("lista-pedidos", "GET", "Controller", "ListaPedidos");
+
+    $r->addRoute("lista-cartoneros", "GET", "Controller", "verCartoneros");
     
     //ABM Materiales
         //Alta

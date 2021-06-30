@@ -79,6 +79,11 @@ class Controller{
          $this->view->FormularioLocation();
     }
 
+    function verCartoneros() {
+        $cartoneros = $this->model->getCartoneros();
+        $this->view->verCartoneros($cartoneros);
+    }
+
     function insertarCartonero(){
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
@@ -138,8 +143,8 @@ class Controller{
         $apellido = $_POST['apellido'];
         $dni = $_POST['dni'];
         $direccion = $_POST['direccion'];
-        $fechaNacimiento = $_POST['fechaNAcimiento']
-        $tipoVehiculo = $_POST['tipoVehiculo']
+        $fechaNacimiento = $_POST['fechaNAcimiento'];
+        $tipoVehiculo = $_POST['tipoVehiculo'];
        
         if($nombre !='' && $apellido !='' && $dni !='' && $direccion !='' && $fechaNacimiento !='' && $tipoVehiculo !=''){
             $this->model->editarCartonero($nombre, $apellido, $dni, $direccion, $fechaNacimiento, $tipoVehiculo);
