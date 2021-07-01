@@ -2,37 +2,39 @@
     <div class="container-fluid container-postulaciones">
         <form class="row row-plantilla-cargar" action="insertCartonero" method="POST" enctype="multipart/form-data">
             <div class="row box-elem-titulo">
-                <h2 class="titulo-pagina">Formulario de Cartonero</h2>
+                <h2 class="titulo-pagina">Lista de Cartoneros</h2>
             </div>  
             <div class="row row-lista-cartoneros">
                 <div class="box tabla-cartoneros">
                     <table class="table">
                         <thead>
                             <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
                             <th scope="col">DNI</th>
-                            <th scope="col">Fecha de Nacimiento</th>
-                            <th scope="col">Tipo de Vehiculo</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>  
+                             <th scope="col">Direccion</th>                          
+                            <th scope="col">Fecha de Nacimiento</th> 
+                            <th scope="col">Tipo de Vehiculo</th>  
                             <th scope="col">Editar</th>
                             <th scope="col">Borrar</th>
                             <th scope="col">Materiales</th>
                             </tr>
                         </thead>
                         <tbody>
+                            {foreach from=$cartoneros item=cartonero}
                             <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>15.321.312</td>
-                            <td>23/02/1960</td>
-                            <td>Camioneta</td>
+                            <td>{$cartonero->dni}</td>
+                            <td>{$cartonero->nombre}</td>
+                            <td>{$cartonero->apellido}</td>                            
+                            <td>{$cartonero->direccion}</td>
+                            <td>{$cartonero->fechaNacimiento}</td>
+                            <td>{$cartonero->vehiculo}</td>
                             <td><input type="button" value="EDITAR" class="btn-lista-cartoneros-editar"></td>
                             <td><input type="button" value="BORRAR" class="btn-lista-cartoneros"></td>
                             <td><input type="button" value="VER MATERIALES" class="btn-lista-cartoneros-ver-materiales"></td>
                             </tr>
                             <tr>
+                            {/foreach}
                         </tbody>
                     </table>
                 </div>
