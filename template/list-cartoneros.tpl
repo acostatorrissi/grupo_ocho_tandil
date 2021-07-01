@@ -12,7 +12,7 @@
                             <th scope="col">DNI</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>  
-                             <th scope="col">Direccion</th>                          
+                            <th scope="col">Direccion</th>                          
                             <th scope="col">Fecha de Nacimiento</th> 
                             <th scope="col">Tipo de Vehiculo</th>  
                             <th scope="col">Editar</th>
@@ -30,7 +30,7 @@
                             <td>{$cartonero->fechaNacimiento}</td>
                             <td>{$cartonero->vehiculo}</td>
                             <td><input type="button" value="EDITAR" class="btn-lista-cartoneros-editar"></td>
-                            <td><input type="button" value="BORRAR" class="btn-lista-cartoneros"></td>
+                            <td><button type="button" value="BORRAR" class="btn-lista-cartoneros"><a href="borrarCartonero/{$cartonero->dni}"> BORRAR </a></button></td>
                             <td><input type="button" value="VER MATERIALES" class="btn-lista-cartoneros-ver-materiales"></td>
                             </tr>
                             <tr>

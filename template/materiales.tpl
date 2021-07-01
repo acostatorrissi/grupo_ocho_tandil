@@ -49,7 +49,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary">Comfirmar</button>
+                                        <button type="submit" class="btn btn-primary">Confirmar</button>
                                     </div>
                                 </form>
                             </div>
