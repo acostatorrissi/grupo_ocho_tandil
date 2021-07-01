@@ -73,7 +73,7 @@ class View{
 
     function verCartoneros($cartoneros){
         $this->smarty->assign('cartoneros',$cartoneros);
-        $this->smary->display('template/list-cartoneros.tpl');
+        $this->smarty->display('template/list-cartoneros.tpl');
     }
 }
 ?>
