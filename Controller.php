@@ -181,5 +181,10 @@ class Controller{
         }
         header('Location: '.Cartoneros);
     }
- 
+    
+    function verMaterialesCartonero($params = null){
+        $id = $params[':ID'];
+        $materiales = $this->model->getMaterialesCartonero($id);
+        $this->view->verMaterialesXCartonero($materiales);
+    }
 }
