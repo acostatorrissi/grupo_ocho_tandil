@@ -59,6 +59,11 @@ class Model{
         $sentencia->execute(array($id));
     }
 
+    function borrarCartonero($id){
+        $sentencia = $this->db->prepare("DELETE FROM cartonero WHERE dni=?");
+        $sentencia->execute(array($id));
+    }
+
     function getPedidos(){
         $query = $this->db->prepare("SELECT * FROM pedido");
         $query->execute();
