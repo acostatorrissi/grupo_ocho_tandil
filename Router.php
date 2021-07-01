@@ -7,6 +7,8 @@
     // CONSTANTES PARA RUTEO
     define('BASE_URL', 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
     define("Materiales", BASE_URL . 'materiales');
+    define("Cartoneros", BASE_URL . 'lista-cartoneros');
+
     define("LOGIN", BASE_URL . 'login');
    
 
@@ -41,12 +43,13 @@
     //Modificacion
     $r->addRoute("editarMaterial/:ID", "GET", "Controller", "editarMaterial"); // view
     $r->addRoute("editMaterial/:ID", "POST", "Controller", "editMaterial"); // funcion
-
     $r->addRoute("editCartonero/:ID", "POST", "Controller", "editarCartonero");
 
 
     //Baja
     $r->addRoute("borrarMaterial/:ID", "GET", "Controller", "borrarMaterial");
+    $r->addRoute("borrarCartonero/:ID", "GET", "Controller", "borrarCartonero");
+
 
     //ABM Registro-Login 
     $r->addRoute("registro", "GET", "UserController", "showRegistro");//vista de registrar
@@ -55,9 +58,7 @@
     $r->addRoute("login", "GET", "UserController", "showLogin"); 
     $r->addRoute("logout", "GET", "UserController", "logout");
    
-    
-   
-    
+
     //run
     $r->route($_GET['action'], $_SERVER['REQUEST_METHOD']); 
 ?>
