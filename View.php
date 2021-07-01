@@ -70,5 +70,10 @@ class View{
         $this->smarty->assign('pedidos', $pedidos, false);
         $this->smarty->display('template/list-pedidos.tpl');
     }
+
+    function verCartoneros($cartoneros){
+        $this->smarty->assign('cartoneros',$cartoneros);
+        $this->smary->display('template/list-cartoneros.tpl');
+    }
 }
 ?>
