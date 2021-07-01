@@ -47,6 +47,10 @@ class View{
         header("Location: ".BASE_URL."form-cartonero");
     }
 
+    function ListaCartonerosLocation(){
+        header("Location: ".BASE_URL."lista-cartoneros");
+    }
+    
     function ShowAddMaterial(){
         $this->smarty->display('template/add-material.tpl');
     }

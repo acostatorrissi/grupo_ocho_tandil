@@ -97,8 +97,7 @@ class Controller{
 
             $this->model->insertCartonero($nombre,$apellido,$dni,$direccion,$fechaNacimiento,$vehiculo);
         }
-        //TODO redirigir al listado de cartoneros
-         $this->view->FormularioCartoneroLocation();
+        $this->view->ListaCartonerosLocation();
     }
 
     function uploadImage($rutaTemp,$nombreImagen){
