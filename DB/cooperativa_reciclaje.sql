@@ -59,7 +59,7 @@ CREATE TABLE `cartonero` (
 -- Volcado de datos para la tabla `pedido`
 --
 INSERT INTO `cartonero` (`nombre`, `apellido`, `dni`, `direccion`, `fechaNacimiento`, `vehiculo`) VALUES
-('Miguel Angel', 'Gallardo', 23456789, 'Curucuatia 1345', '17/06/1981', 'Automovil');
+('Miguel Angel', 'Gallardo', 23456789, 'Curucuatia 1345', '17/06/1981', 'Automovil'),
 ('Andres', 'Confortovich', 37234456, 'Del Valle 687', '20/06/1993', 'Moto');
 -- --------------------------------------------------------
 
@@ -108,7 +108,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `usuario`, `contrasenia`, `admin`) VALUES
-(3, 'admin', '$2y$10$1Pu7LZCnKSYnVdlSPeDwrOJWDOkOM.cePH.5NoT70C9IVH8EN4IX.', 1);
+(3, 'admin', '$2y$10$1Pu7LZCnKSYnVdlSPeDwrOJWDOkOM.cePH.5NoT70C9IVH8EN4IX.', 1),
 (2, 'usuariouno', '$2y$10$/eNzXljMb5JLQUxt69FJuOSYB5cNOa5mrd/chewVhCMU4iwRRvv/S', 0);
 
 --
