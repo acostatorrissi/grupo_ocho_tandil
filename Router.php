@@ -31,7 +31,7 @@
     $r->addRoute("form-kilos", "GET", "Controller", "FormKilos"); // view
     $r->addRoute("insertKilogramoMaterial", "POST", "Controller", "insertKilogramos"); // funcion
 
-    $r->addRoute("lista-materiales/:ID", "POST", "Controller", "verMaterialesCartonero");
+    $r->addRoute("cargas-cartonero/:ID", "GET", "Controller", "verMaterialesCartonero");
 
     $r->addRoute("lista-pedidos", "GET", "Controller", "ListaPedidos");
 

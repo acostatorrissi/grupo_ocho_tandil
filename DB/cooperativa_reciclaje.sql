@@ -1,23 +1,4 @@
 --
--- Estructura de tabla para la tabla `carga`
---
-
-CREATE TABLE `carga` (
-  `tipo_material` varchar(50) NOT NULL,
-  `kilogramos` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `carga`
---
-
-INSERT INTO `carga` (`tipo_material`, `kilogramos`) VALUES
-('Vidrio', 1234),
-('Cartón', 257);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `material`
 --
 
@@ -111,6 +92,30 @@ INSERT INTO `user` (`id`, `usuario`, `contrasenia`, `admin`) VALUES
 (3, 'admin', '$2y$10$1Pu7LZCnKSYnVdlSPeDwrOJWDOkOM.cePH.5NoT70C9IVH8EN4IX.', 1),
 (2, 'usuariouno', '$2y$10$/eNzXljMb5JLQUxt69FJuOSYB5cNOa5mrd/chewVhCMU4iwRRvv/S', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carga`
+--
+
+CREATE TABLE `carga` (
+  `id_carga` int(50) NOT NULL,
+  `dni` int(8) NOT NULL,
+  `tipo_material` varchar(50) NOT NULL,
+  `kilogramos` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- Volcado de datos para la tabla `carga`
+--
+
+INSERT INTO `carga` (`id_carga`,`dni`,`tipo_material`, `kilogramos`) VALUES
+(0, 23456789, 'Vidrio', 1234),
+(1, 23456789, 'Cartón', 257),
+(2, 37234456, 'Tetrabrik', 15),
+(3, 23456789, 'Envases plásticos', 3400);
+
+-- --------------------------------------------------------
+
 --
 -- Índices para tablas volcadas
 --
@@ -121,6 +126,11 @@ INSERT INTO `user` (`id`, `usuario`, `contrasenia`, `admin`) VALUES
 ALTER TABLE `material`
   ADD PRIMARY KEY (`id`);
 
+--
+-- Indices de la tabla `carga`
+--
+ALTER TABLE `carga`
+  ADD PRIMARY KEY (`id_carga`);
 --
 -- Indices de la tabla `pedido`
 --
@@ -148,8 +158,21 @@ ALTER TABLE `material`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT de la tabla `carga`
+--
+ALTER TABLE `carga`
+  MODIFY `id_carga` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  
+--
+-- FOREIGN KEY de la tabla `carga`
+--
+ALTER TABLE `carga`
+  ADD CONSTRAINT `CARTONERO_X_CARGA` FOREIGN KEY (`dni`) REFERENCES `cartonero` (`dni`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 COMMIT;
