@@ -16,6 +16,12 @@ class Model{
         $query->execute();
         return  $query->fetchAll(PDO::FETCH_OBJ);
     }
+    
+    function getMaterialesPorCartonero($id){
+        $query = $this->db->prepare("SELECT * FROM carga NATURAL JOIN cartonero WHERE dni=?");
+        $query->execute(array($id));
+        return  $query->fetchAll(PDO::FETCH_OBJ);
+    }
 
     function getCartoneros(){
         $query = $this->db->prepare("SELECT * FROM cartonero");

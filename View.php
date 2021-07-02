@@ -80,7 +80,7 @@ class View{
         $this->smarty->display('template/list-cartoneros.tpl');
     }
 
-    function verMaterialesXCartonero($materiales){
+    function verMaterialesPorCartonero($materiales){
         $this->smarty->assign('materiales',$materiales);
         $this->smarty->display('template/list-materiales.tpl');
     }
