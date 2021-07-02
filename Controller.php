@@ -184,7 +184,7 @@ class Controller{
     
     function verMaterialesCartonero($params = null){
         $id = $params[':ID'];
-        $materiales = $this->model->getMaterialesCartonero($id);
-        $this->view->verMaterialesXCartonero($materiales);
+        $materiales = $this->model->getMaterialesPorCartonero($id);
+        $this->view->verMaterialesPorCartonero($materiales);
     }
 }
