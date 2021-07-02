@@ -1,8 +1,8 @@
 {include "template/header.tpl" }
     <div class="container-fluid container-postulaciones">
-        <form class="row row-plantilla-cargar" action="insertCartonero" method="POST" enctype="multipart/form-data">
+        <form class="row row-plantilla-cargar" action="insertCartonero" method="GET" enctype="multipart/form-data">
             <div class="row box-elem-titulo">
-                <h2 class="titulo-pagina">Rodolfo Suarez</h2>
+                <h2 class="titulo-pagina">{$materiales[0]->nombre}, {$materiales[0]->apellido} - {$materiales[0]->dni}</h2>
             </div>  
             <div class="row row-lista-materiales-cartonero">
                 <div class="box tabla-materiales-cartonero">
@@ -29,7 +29,7 @@
 
             </div> 
             <div class="row box-elem-boton"> 
-                <button type="submit" class="btn-regresar-materiales">REGRESAR</button>
+                <button class="btn-regresar-materiales"><a href="/grupo_ocho_tandil/lista-cartoneros">REGRESAR</a></button>
             </div>
         </form>
     </div>
