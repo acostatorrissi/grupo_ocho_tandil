@@ -31,7 +31,7 @@
                                 <td>{$cartonero->vehiculo}</td>
                                 <td><button type="button" class="btn-lista-cartoneros-editar" data-toggle="modal" data-target="#modificar{$cartonero->dni}" aria-expanded="false"> EDITAR </button></td>
                                 <td><button type="button" value="BORRAR" class="btn-lista-cartoneros"><a href="borrarCartonero/{$cartonero->dni}"> BORRAR </a></button></td>
-                                <td><input type="button" value="VER MATERIALES" class="btn-lista-cartoneros-ver-materiales"></td>
+                                <td><button type="button" value="VER MATERIALES" class="btn-lista-cartoneros-ver-materiales"><a href="cargas-cartonero/{$cartonero->dni}"> VER MATERIALES </a></button></td>
                                 <div class="modal fade" id="modificar{$cartonero->dni}" tabindex="-1" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content ">

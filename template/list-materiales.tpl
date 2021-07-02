@@ -6,7 +6,6 @@
             </div>  
             <div class="row row-lista-materiales-cartonero">
                 <div class="box tabla-materiales-cartonero">
-
                     <i class="fas fa-user-circle fa-7x img-perfil-cartonero"></i>
                     <table class="table table-materiales-cartonero">
                         <thead>
@@ -17,31 +16,13 @@
                             </tr>
                         </thead>
                         <tbody>
+                        {foreach from=$materiales item=material}
                             <tr>
-                            <td>112421</td>
-                            <th scope="row">Aluminio</th>
-                            <td>150kg</td>
+                                <td>{$material->id_carga}</td>
+                                <th scope="row">{$material->tipo_material}</th>
+                                <td>{$material->kilogramos}</td>
                             </tr>
-                            <tr>
-                            <td>112421</td>
-                            <th scope="row">Plastico</th>
-                            <td>250kg</td>
-                            </tr>
-                            <tr>
-                            <td>112421</td>
-                            <th scope="row">Vidrio</th>
-                            <td>250kg</td>
-                            </tr>
-                            <tr>
-                            <td>112421</td>
-                            <th scope="row">Tetrabrik</th>
-                            <td>250kg</td>
-                            </tr>
-                            <tr>
-                            <td>112421</td>
-                            <th scope="row">Carton</th>
-                            <td>250kg</td>
-                            </tr>
+                        {/foreach}
                         </tbody>
                     </table>
                 </div>
