@@ -168,11 +168,11 @@ class Controller{
         $apellido = $_POST['apellido'];
         $dni = $_POST['dni'];
         $direccion = $_POST['direccion'];
-        $fechaNacimiento = $_POST['fechaNAcimiento'];
+        $fechaNacimiento = $_POST['fechaNacimiento'];
         $tipoVehiculo = $_POST['tipoVehiculo'];
        
         if($nombre !='' && $apellido !='' && $dni !='' && $direccion !='' && $fechaNacimiento !='' && $tipoVehiculo !=''){
-            $this->model->editarCartonero($nombre, $apellido, $dni, $direccion, $fechaNacimiento, $tipoVehiculo);
+            $this->model->editarCartonero($nombre, $apellido, $dni, $direccion, $fechaNacimiento, $tipoVehiculo, $id);
         }
         else{
             $msg = "COMPLETE TODOS LOS CAMPOS";

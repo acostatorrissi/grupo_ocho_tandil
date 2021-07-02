@@ -70,9 +70,9 @@ class Model{
         return  $query->fetchAll(PDO::FETCH_OBJ);
     }
 
-    function editarCartonero($nombre, $apellido, $dni, $direccion, $fechaNacimiento, $tipoVehiculo){
+    function editarCartonero($nombre, $apellido, $dni, $direccion, $fechaNacimiento, $tipoVehiculo, $id){
         $sentencia = $this->db->prepare("UPDATE cartonero SET nombre=?,apellido=?, dni=?, direccion=?, fechaNacimiento=?, vehiculo=? WHERE dni=?");
-        $sentencia->execute(array($nombre, $apellido, $dni, $direccion, $fechaNacimiento, $tipoVehiculo));
+        $sentencia->execute(array($nombre, $apellido, $dni, $direccion, $fechaNacimiento, $tipoVehiculo, $id));
     }
 }
 
