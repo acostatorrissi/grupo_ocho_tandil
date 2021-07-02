@@ -36,6 +36,8 @@
     $r->addRoute("lista-pedidos", "GET", "Controller", "ListaPedidos");
 
     $r->addRoute("lista-cartoneros", "GET", "Controller", "verCartoneros");
+
+    $r->addRoute("materiales-cartonero", "GET", "Controller", "verMaterialesCartonero");
     
     //ABM Materiales
         //Alta
