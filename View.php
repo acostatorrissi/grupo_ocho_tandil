@@ -79,5 +79,11 @@ class View{
         $this->smarty->assign('cartoneros',$cartoneros);
         $this->smarty->display('template/list-cartoneros.tpl');
     }
+
+    function verMaterialesXCartonero($materiales){
+        $this->smarty->assign('materiales',$materiales);
+        $this->smarty->display('template/list-materiales.tpl');
+    }
+    
 }
 ?>
