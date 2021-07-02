@@ -51,10 +51,6 @@
                                                         <input type="text" class="form-control" name="apellido" value={$cartonero->apellido} required>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="dni" class="text-dark">Dni</label>
-                                                        <input type="text" class="form-control" name="dni" value={$cartonero->dni} required>
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="direccion" class="text-dark">Dirección</label>
                                                         <input type="text" class="form-control" name="direccion" value={$cartonero->direccion} required>
                                                     </div>
