@@ -44,9 +44,9 @@ class Model{
         $sentencia->execute(array($nombre,$img,$descripcion));
     }
 
-    function insertKilogramos($material, $kilogramos){
-        $sentencia = $this->db->prepare("INSERT INTO carga(tipo_material,kilogramos) VALUES (?,?)");
-        $sentencia->execute(array($material, $kilogramos));
+    function insertKilogramos($cartonero, $material, $kilogramos){
+        $sentencia = $this->db->prepare("INSERT INTO carga(dni, tipo_material,kilogramos) VALUES (?,?,?)");
+        $sentencia->execute(array($cartonero, $material, $kilogramos));
     }
 
     function editarMaterial($nombre,$img,$descripcion,$id){

@@ -6,18 +6,24 @@
                 <h2 class="titulo-pagina">Cargar materiales por Kilogramo</h2>
             </div>  
             <div class="row row-form-cargar">
-                <div class="row row-form-post-text">
-                    <h5>Nombre</h5>   
-                </div> 
                 <div class="row row-form-post">
-                    <h5 class="texto-form">Carlos</h5>
+                    {if $msg!=''}
+                        <div class="mensaje">
+                            <h5>{$msg}</h5>
+                        </div>
+                    {/if}
                 </div>
                 <div class="row row-form-post-text">
-                    <h5>Apellido</h5>   
+                    <h5>Cartonero</h5>
                 </div> 
                 <div class="row row-form-post">
-                    <h5 class="texto-form">Baute</h5>
-                </div>   
+                    <select class="select-form" name="cartonero">
+                        <option value="-">-</option>
+                        {foreach from=$cartoneros item=$cartonero}
+                            <option value={$cartonero->dni}> {$cartonero->nombre} {$cartonero->apellido} </option>
+                        {/foreach}
+                    </select>
+                </div> 
                 <div class="row row-form-post-text">
                     <h5>Material</h5>   
                 </div> 

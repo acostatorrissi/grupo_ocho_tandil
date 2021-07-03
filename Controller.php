@@ -29,17 +29,23 @@ class Controller{
     }
 
     function FormKilos() {
-        $this->view->MostrarFormKilos();
+        $cartoneros = $this->model->getCartoneros();
+        $this->view->MostrarFormKilos($cartoneros);
     }
 
     function insertKilogramos() {
+        $cartonero = $_POST['cartonero'];
         $material = $_POST['material'];
         $kilogramos = $_POST['kilogramos'];
+        $cartoneros = $this->model->getCartoneros();
 
-        if (!empty($material) && !empty($kilogramos)) {
-            $this->model->insertKilogramos($material, $kilogramos);
-        } 
-        $this->view->MostrarFormKilos();
+        if (!empty($material) && !empty($kilogramos) && $cartonero != "-") {
+            $this->model->insertKilogramos($cartonero, $material, $kilogramos);
+            $this->view->MostrarFormKilos($cartoneros);
+        } else {
+            $msg = "Complete todos los campos.";
+            $this->view->MostrarFormKilos($cartoneros, $msg);
+        }
     }
 
     function Materiales() {
