@@ -660,3 +660,49 @@ a:hover {
     font-weight: bold;
     font-size: 11px;  
 }
+
+
+/* Lista Materiales Cartonero */
+
+
+.row-lista-materiales-cartonero {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #FDFDFD;
+    border-radius: 10px;
+    display: grid;
+    column-gap: 125px;
+    row-gap: 4px;
+    grid-template-columns: 100px 1fr 100px;
+    overflow-y: scroll;
+}
+
+.tabla-materiales-cartonero {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;    
+}
+
+.table-materiales-cartonero {
+    margin-top: 25px;
+}
+
+.btn-regresar-materiales {
+    width: 340px;
+    height: 33px;
+    text-decoration: none;
+    background-color: #9ACAA7;
+    border-radius: 100px;
+    border: 0px solid #000000;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;   
+    color: white;
+}
+
+.img-perfil-cartonero {
+    color: rgb(97, 96, 96);
+}
