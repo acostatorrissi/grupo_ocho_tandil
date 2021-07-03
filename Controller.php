@@ -166,7 +166,6 @@ class Controller{
         $dni = $params[':ID'];
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
-       // $dni = $_POST['dni'];
         $direccion = $_POST['direccion'];
         $fechaNacimiento = $_POST['fechaNacimiento'];
         $tipoVehiculo = $_POST['tipoVehiculo'];
