@@ -27,6 +27,7 @@
                 {elseif ($smarty.session) && ($smarty.session.ISADMIN)==1}
                 <a href="/grupo_ocho_tandil/lista-pedidos">Lista de Pedidos</a>
                 <a href="/grupo_ocho_tandil/lista-cartoneros">Lista de Cartoneros</a>
+                <a href="/grupo_ocho_tandil/form-kilos">Carga de kilos</a>
                 <a href="/grupo_ocho_tandil/form-cartonero">Registrar Cartonero</a>
                 <a href="/grupo_ocho_tandil/logout">Logout</a> 
                 {else}
