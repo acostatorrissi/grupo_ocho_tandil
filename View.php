@@ -28,7 +28,9 @@ class View{
         $this->smarty->display('template/form-cartonero.tpl');  
     }
 
-    function MostrarFormKilos() {
+    function MostrarFormKilos($cartoneros, $msg = '') {
+        $this->smarty->assign('cartoneros',$cartoneros);
+        $this->smarty->assign('msg',$msg);
         $this->smarty->display('template/form-kilos.tpl');
     }
 
