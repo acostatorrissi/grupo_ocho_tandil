@@ -703,6 +703,12 @@ a:hover {
     color: white;
 }
 
+#a-agregar-cartonero {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
 .img-perfil-cartonero {
     color: rgb(97, 96, 96);
 }
