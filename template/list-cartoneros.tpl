@@ -84,7 +84,7 @@
                 </div> 
             </div>
             <div class="row box-elem-boton"> 
-                <button class="btn-elem-publicar-aviso"><a id="a-agregar-cartonero" href="/grupo_ocho_tandil/form-ciudadano">AGREGAR CARTONERO</a></button>
+                <button class="btn-elem-publicar-aviso"><a id="a-agregar-cartonero" href="/grupo_ocho_tandil/form-cartonero">AGREGAR CARTONERO</a></button>
             </div>
         </div>
     </div>
