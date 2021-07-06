@@ -1,9 +1,10 @@
 {include "template/header.tpl" }
     <div class="container-fluid container-postulaciones">
         <form class="row row-plantilla-cargar" action="insertCartonero" method="GET" enctype="multipart/form-data">
+        {if $materiales|@count !== 0} 
             <div class="row box-elem-titulo">
                 <h2 class="titulo-pagina">{$materiales[0]->nombre}, {$materiales[0]->apellido} - {$materiales[0]->dni}</h2>
-            </div>  
+            </div> 
             <div class="row row-lista-materiales-cartonero">
                 <div class="box tabla-materiales-cartonero">
                     <i class="fas fa-user-circle fa-7x img-perfil-cartonero"></i>
@@ -26,8 +27,12 @@
                         </tbody>
                     </table>
                 </div>
-
-            </div> 
+            </div>
+        {else}
+            <div class="row box-elem-titulo">
+                <h2 class="titulo-pagina">El cartonero no posee materiales asociados</h2>
+            </div>
+        {/if}           
             <div class="row box-elem-boton"> 
                 <button class="btn-regresar-materiales"><a href="/grupo_ocho_tandil/lista-cartoneros">REGRESAR</a></button>
             </div>
